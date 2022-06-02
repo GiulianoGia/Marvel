@@ -10,15 +10,23 @@ Damit wir eine Datenbank-Anbindung machen könnnen mussten wir zuerst recherchie
 
 | User |
 | ------------- |
-| id **int**  |
-|  firstname **string**  |
-| lastname **string** |
-| email **string** |
-| age **int** |
-| password **string** |
-| lastlogin **localdatetime** |
+| id `int`  |
+|  firstname `string`  |
+| lastname `string` |
+| email `string` |
+| age `int` |
+| password `string` |
+| lastlogin `localdatetime` |
 
-
+| Film |
+| ---- |
+| id `int` |
+| name `string` |
+| image `string` |
+| video `string` |
+| selected  `boolean` |
+| actorsIFDS `int` |
+| budget `double` |
 
 ## Planen
 ### ToDo
