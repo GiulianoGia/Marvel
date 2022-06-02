@@ -64,7 +64,7 @@ Wir nutzen MariaDB für eine. Für den User wird jeder Username unique sein. Als
 #### Wo wurde nicht auf meine Meinung eingegangen
 Wir haben diskutiert, welches DBMS wir nutzen wollen, da ist nicht auf meiner Meinung eingegangen.
 #### Wobei konnte ich mich durchsetzten
-
+Wir machen die Information, dass jemand eingeloggt ist in ein Cookie. Hier konnte ich mich durchsetzen.
 #### In welchen Punkten war sich die Gruppe einig.
 Wir waren uns einige, wie wir das Readme File gestalten wollen und auf was wir achten sollten.
 #### Auf was bin ich stolz (oder eben nicht)
