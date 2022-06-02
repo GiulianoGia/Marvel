@@ -8,6 +8,17 @@ Unser Ziel ist es eine Webapplikation zu machen, welche im Hintergrund eine Date
 
 Damit wir eine Datenbank-Anbindung machen könnnen mussten wir zuerst recherchieren, wie man die dependencies für eine MariaDB konfiguriert. Als nächstes war noch unklar, wie die Repository mit Hilfe von Querys Datenbank abragen machen kann. Die nächste Sache, die ausserdem geklärt werden musste, wie wir unsere Datenbank aufbauen werden. Wie folgt werden unsere Entity's aussehen:
 
+| User |
+| ------------- |
+| id **int**  |
+|  firstname **string**  |
+| lastname **string** |
+| email **string** |
+| age **int** |
+| password **string** |
+| lastlogin **localdatetime** |
+
+
 
 ## Planen
 ### ToDo
