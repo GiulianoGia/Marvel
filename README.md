@@ -2,6 +2,8 @@
 
 # Projektjournal
 ## Informieren
+### Ziel
+Unser Ziel ist es eine Webapplikation zu machen, welche im Hintergrund eine Datenbank hat, die unsere User Daten und Filme abspeichert. User Programm sollte dem User die Möglichkeit geben eine Übersicht zu erhalten über die beliebtesten Marvel Filme.
 ## Planen
 ## Entscheiden
 ## Realisieren
