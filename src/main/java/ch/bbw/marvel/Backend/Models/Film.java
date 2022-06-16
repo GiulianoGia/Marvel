@@ -1,4 +1,4 @@
-package ch.bbw.marvel.Backend.Models.;
+package ch.bbw.marvel.Backend.Models;
 
 import com.sun.istack.NotNull;
 
