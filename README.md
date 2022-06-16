@@ -69,3 +69,7 @@ Wir machen die Information, dass jemand eingeloggt ist in ein Cookie. Hier konnt
 Wir waren uns einige, wie wir das Readme File gestalten wollen und auf was wir achten sollten.
 #### Auf was bin ich stolz (oder eben nicht)
 Ich bin sehr stolz auf die Tabellen und Algemein, wie die Dokumentation aussieht.
+
+## 09/06/2022
+>Anthony Peña Vargas
+####
