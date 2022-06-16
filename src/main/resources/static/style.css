@@ -1,0 +1,115 @@
+body {
+    font-family: sans-serif;
+    margin: 0px;
+}
+
+input:not(input[type="checkbox"]) {
+    width: 100%;
+}
+
+input:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+body *:focus {
+    outline:none;
+    border-style: solid;
+    border-color: #0b7fd7;
+    border-radius: 7px;
+    border-width: 2px;
+}
+
+a {
+    color: #65a3d1;
+}
+
+button {
+    height: 50px;
+    width: 100%;
+}
+button:hover {
+    cursor:pointer;
+}
+
+button:disabled {
+    cursor:not-allowed;
+}
+
+
+.login-page {
+    background-image: url("images/login-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.form-container {
+    margin: auto;
+    padding: 5px 20px;
+    width: 270px;
+    background-color: white;
+    border: none;
+    border-radius: 7px;
+
+}
+
+.form-title {
+    color: #e70002;
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 0px;
+}
+
+.form-title a {
+    color: black;
+}
+.form-container input {
+    height: 30px;
+    font-size: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 7px;
+    border-color: #bdbdbd;
+}
+
+
+
+
+.input-container {
+    margin-top: 20px;
+}
+
+.button-red {
+    background-color: #d20002;
+    color: white;
+    border: none;
+    font-size: 20px;
+    border-radius: 7px;
+}
+
+.button-red:disabled {
+    background-color: #af4748;
+}
+
+.button-red:hover:not(.button-red[disabled="disabled"]) {
+    background-color: #ff0003;
+}
+
+.button-black {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 7px;
+}
+
+.button-black:disabled {
+    background-color: #333030;
+}
+
+.button-black:hover:not(.button-black[disabled="disabled"]) {
+    background-color: #2d2d2d;
+}
+
+.form-container .button-red {
+    margin: 20px 0px;
+}
