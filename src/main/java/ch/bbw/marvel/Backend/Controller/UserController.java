@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:8081")
+@CrossOrigin(origins = "http://localhost:8080")
 public class UserController {
 
     @Autowired
