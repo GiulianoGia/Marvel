@@ -1,7 +1,7 @@
-package ch.bbw.marvel.Backend.Controller;
+package ch.bbw.marvel.backend.controller;
 
-import ch.bbw.marvel.Backend.Models.User;
-import ch.bbw.marvel.Backend.Services.UserServiceInterface;
+import ch.bbw.marvel.backend.models.User;
+import ch.bbw.marvel.backend.services.UserServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

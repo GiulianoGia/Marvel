@@ -1,7 +1,7 @@
-package ch.bbw.marvel.Backend.Services;
+package ch.bbw.marvel.backend.services;
 
-import ch.bbw.marvel.Backend.Models.Film;
-import ch.bbw.marvel.Backend.Repository.FilmRepository;
+import ch.bbw.marvel.backend.models.Film;
+import ch.bbw.marvel.backend.repository.FilmRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

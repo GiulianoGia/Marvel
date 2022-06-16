@@ -1,9 +1,7 @@
-package ch.bbw.marvel.Frontend;
+package ch.bbw.marvel.frontend;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 @Controller
 public class FrontendController {
