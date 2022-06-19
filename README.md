@@ -88,12 +88,14 @@ Ich bin stolz auf meine Login-page, die ich gemacht habe.
 ## 16/06/2022
 > Giuliano Gianola
 #### Wo wurde nicht auf meine Meinung eingegangen
+Wir haben miteinander diskutiert, welche Technologie wir brauchen, um Api Request zu machen. Ich habe ihm den Vorschlag gemacht Axios zu brauchen. Jedoch ist er nicht auf meine Meinung eingegangen und hat etwas anderes benutzt. Was jedoch am Ende sehr gut funktioniert hat. 
 
 #### Wobei konnte ich mit durchsetzen
-
+Ich konnte mich durchsetzten, dass wir die application.properties nicht verändern, da es bis jetzt immer sehr gut funktioniert hat. 
 #### In welchen Punkten war sich die Gruppe einig
-
+Wir waren uns einig, dass Anthony das Frontend macht und ich weiter am Backend schreibe. 
 #### Auf was bin ich stolz (oder eben nicht)
+Ich war darauf stolz, dass mein Backend sehr gut mit seinem Frontend funktioniert hat. Wir konnnten erfolgreich alles miteinander verbinden. 
 
 ## 16/06/2022
 > Anthony Peña Vargas
