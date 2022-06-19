@@ -18,6 +18,8 @@ public class FrontendController {
     }
 
     @GetMapping("/register")
-    public String register() { return "register"; }
+    public String register() {
+        return "register";
+    }
 
 }
