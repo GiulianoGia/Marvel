@@ -17,5 +17,9 @@ public class FrontendController {
         return "login";
     }
 
+    @GetMapping("/register")
+    public String register() {
+        return "register";
+    }
 
 }
