@@ -100,9 +100,10 @@ Ich war darauf stolz, dass mein Backend sehr gut mit seinem Frontend funktionier
 ## 16/06/2022
 > Anthony Peña Vargas
 #### Wo wurde nicht auf meine Meinung eingegangen
-
+Eigentlich gab es nichts wo nicht auf meine Meinung gehört wurde.
 #### Wobei konnte ich mit durchsetzen
-
+Ich habe beim Frontend eigentlich komplette Kontrolle und ich konnte Giuliano davon überzeugen in die Response noch die UserID mitzugeben.
 #### In welchen Punkten war sich die Gruppe einig
-
+Wir waren uns einig 
 #### Auf was bin ich stolz (oder eben nicht)
+Ich finde es gut, dass mein Javascript die Request richtig senden konnte und das es die Response richtig verarbeitet hat. Ich bin nicht so stolz, dass ich heute kaum weiter gekommen bin.
