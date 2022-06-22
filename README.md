@@ -48,6 +48,10 @@ Für die Erstellung eines Controllers rechnen wir mit einer halben bis einer Stu
 ## Entscheiden
 Wir nutzen MariaDB für eine. Für den User wird jeder Username unique sein. Als Webframework nutzen wir spring boot. Als Version Control System haben wir uns für Github entschieden, da wir so gemeinsam an einem Projekt arbeiten können und man kann es einfach mit IntelliJ nutzen.
 ## Realisieren
+### Backend
+
+### Frontend
+
 ## Kontrollieren
 ## Auswerten
 
@@ -72,4 +76,33 @@ Ich bin sehr stolz auf die Tabellen und Algemein, wie die Dokumentation aussieht
 
 ## 09/06/2022
 >Anthony Peña Vargas
-####
+#### Wo wurde nicht auf meine Meinung eingegangen
+Heute gab es nichts wo nicht auf meine Meinung eingegangen wurde, da Giuliano heute krank war.
+#### Wobei konnte ich mich durchsetzen
+Ich habe komplett freie Hand im Frontend
+#### In welchen Punkten war sich die Gruppe einig?
+Da ich heute alleine war, gab es kein Punkt, wo wir uns nicht einig sein konnten.
+#### Auf was bin ich stolz?
+Ich bin stolz auf meine Login-page, die ich gemacht habe.
+
+## 16/06/2022
+> Giuliano Gianola
+#### Wo wurde nicht auf meine Meinung eingegangen
+Wir haben miteinander diskutiert, welche Technologie wir brauchen, um Api Request zu machen. Ich habe ihm den Vorschlag gemacht Axios zu brauchen. Jedoch ist er nicht auf meine Meinung eingegangen und hat etwas anderes benutzt. Was jedoch am Ende sehr gut funktioniert hat. 
+
+#### Wobei konnte ich mit durchsetzen
+Ich konnte mich durchsetzten, dass wir die application.properties nicht verändern, da es bis jetzt immer sehr gut funktioniert hat. 
+#### In welchen Punkten war sich die Gruppe einig
+Wir waren uns einig, dass Anthony das Frontend macht und ich weiter am Backend schreibe. 
+#### Auf was bin ich stolz (oder eben nicht)
+Ich war darauf stolz, dass mein Backend sehr gut mit seinem Frontend funktioniert hat. Wir konnnten erfolgreich alles miteinander verbinden. 
+
+## 16/06/2022
+> Anthony Peña Vargas
+#### Wo wurde nicht auf meine Meinung eingegangen
+
+#### Wobei konnte ich mit durchsetzen
+
+#### In welchen Punkten war sich die Gruppe einig
+
+#### Auf was bin ich stolz (oder eben nicht)
