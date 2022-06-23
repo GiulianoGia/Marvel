@@ -11,4 +11,12 @@ public class Login {
     public void setWorked(boolean worked) {
         this.worked = worked;
     }
+
+    public String getUserID() {
+        return userID;
+    }
+
+    public void setUserID(String userID) {
+        this.userID = userID;
+    }
 }
