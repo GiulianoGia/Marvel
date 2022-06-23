@@ -5,7 +5,9 @@ import ch.bbw.marvel.backend.services.UserServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Logger;
 
 @RestController
@@ -38,13 +40,16 @@ public class UserController {
     }
 
     @GetMapping("/user/login")
-    public Boolean getUserLogin(@RequestParam(value = "email") String email,
-                                @RequestParam(value = "password") String password) {
+    public Map<String, Object> getUserLogin(@RequestParam(value = "email") String email,
+                                            @RequestParam(value = "password") String password) {
         var loggedIn = userService.getUserLogin(email, password) != null;
+        Map<String, Object> result = new HashMap<String, Object>();
+        result.put("worked", loggedIn);
         if (loggedIn) {
+            result.put("userID", userService.getUserLogin(email, password).getId());
             userService.updateUser(email);
         }
-        return loggedIn;
+        return result;
     }
 
     @PostMapping(value = "/user/new", params = {"age", "email", "firstname", "lastname", "password"})
