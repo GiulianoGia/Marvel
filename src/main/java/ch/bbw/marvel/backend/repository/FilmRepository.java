@@ -16,7 +16,7 @@ public interface FilmRepository extends JpaRepository<Film, Integer> {
     List<Film> getAllFilm();
 
     @Query(value = "insert into film (filmid, cost, name, rating, image) VALUES (:id, :cost, :name, :rating, :image)", nativeQuery = true)
-    Film createFilm(@Param("id") Integer id, @Param("cost") Integer cost, @Param("name") String name, @Param("rating") Double rating);
+    Film createFilm(@Param("id") Integer id, @Param("cost") Integer cost, @Param("name") String name, @Param("rating") Double rating, @Param("image") String image);
 
     @Query(value="select * from film where name like :name%", nativeQuery = true)
     List<Film> getFilmByName(@Param("name") String name);
