@@ -1,26 +1,11 @@
 package ch.bbw.marvel.frontend.models;
 
-import com.sun.istack.NotNull;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.validation.constraints.Null;
-
-
-@Entity
 public class Film {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private int filmID;
-    @NotNull
     private String name;
-    @NotNull
     private int cost;
-    @NotNull
     private double rating;
-    @Null
     private String image;
 
     public Film(Integer cost, String name, Double rating) {
