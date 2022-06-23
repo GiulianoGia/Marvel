@@ -10,6 +10,7 @@ input:not(input[type="checkbox"]) {
 input:disabled {
     background-color: #f0f0f0;
     cursor: not-allowed;
+    pointer-events: none;
 }
 
 body *:focus {
@@ -28,7 +29,7 @@ button {
     height: 50px;
     width: 100%;
 }
-button:hover {
+button:hover:not(button:disabled) {
     cursor:pointer;
 }
 
@@ -91,7 +92,7 @@ button:disabled {
     background-color: #af4748;
 }
 
-.button-red:hover:not(.button-red[disabled="disabled"]) {
+.button-red:hover:not(.button-red:disabled) {
     background-color: #ff0003;
 }
 
@@ -106,7 +107,7 @@ button:disabled {
     background-color: #333030;
 }
 
-.button-black:hover:not(.button-black[disabled="disabled"]) {
+.button-black:hover:not(.button-black:disabled) {
     background-color: #2d2d2d;
 }
 

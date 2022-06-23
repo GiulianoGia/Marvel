@@ -1,16 +1,29 @@
-package ch.bbw.marvel.frontend.models;
+package ch.bbw.marvel.frontend.models;;
 
+// IMPORTS
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 public class User {
+
+// ---------------------------------------------------------------------------------------------------------------------
+// ATTRIBUTES
     private int id;
     private String firstname;
     private String lastname;
     private int age;
+
+    @NotNull
+    @Email
     private String email;
+
+    @NotNull
     private String password;
     private Date lastLoggedIn;
 
+// ---------------------------------------------------------------------------------------------------------------------
+// CONSTRUCTORS
     public User() {}
 
     public User(Integer age, String email, String firstname, String lastname, String password) {
@@ -22,6 +35,9 @@ public class User {
         this.password = password;
         this.lastLoggedIn = new Date(System.currentTimeMillis());
     }
+
+// ---------------------------------------------------------------------------------------------------------------------
+// GETTER AND SETTER
 
     public Integer getId() {
         return id;
