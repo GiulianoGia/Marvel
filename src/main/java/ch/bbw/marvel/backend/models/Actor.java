@@ -2,12 +2,14 @@ package ch.bbw.marvel.backend.models;
 
 import com.sun.istack.NotNull;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Entity
 public class Actor {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int actorID;
     @NotNull
     private String firstname;
