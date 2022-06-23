@@ -16,16 +16,10 @@ public class Film {
     @NotNull
     private double rating;
 
-    @ManyToOne
-    @JoinColumn(name = "actor_actor_id")
-    private Actor actor;
-
-    public Actor getActor() {
-        return actor;
-    }
-
-    public void setActor(Actor actor) {
-        this.actor = actor;
+    public Film(Integer cost, String name, Double rating) {
+        this.cost = cost;
+        this.name = name;
+        this.rating = rating;
     }
 
     public int getFilmID() {
