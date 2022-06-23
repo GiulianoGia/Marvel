@@ -1,6 +1,6 @@
-package ch.bbw.marvel.Backend.Services;
+package ch.bbw.marvel.backend.services;
 
-import ch.bbw.marvel.Backend.Models.User;
+import ch.bbw.marvel.backend.models.User;
 
 import java.util.List;
 

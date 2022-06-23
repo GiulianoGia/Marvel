@@ -1,7 +1,7 @@
-package ch.bbw.marvel.Backend.Services;
+package ch.bbw.marvel.backend.services;
 
-import ch.bbw.marvel.Backend.Models.User;
-import ch.bbw.marvel.Backend.Repository.UserRepository;
+import ch.bbw.marvel.backend.models.User;
+import ch.bbw.marvel.backend.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
