@@ -20,13 +20,27 @@ Damit wir eine Datenbank-Anbindung machen könnnen mussten wir zuerst recherchie
 
 | Film |
 | ---- |
-| id `int` |
+| filmid `int` |
 | name `string` |
 | image `string` |
 | video `string` |
 | selected  `boolean` |
 | actorsIFDS `int` |
 | budget `double` |
+
+| Actor |
+| ---- |
+| actorid `int` |
+| age `int` |
+| firstname `string` |
+| lastname `string` |
+| img  `boolean` |
+
+| Film_Actor |
+| ---- |
+| id `int` |
+| actor_actor_id `int` |
+| film_film_id `int` |
 
 ## Planen
 ### ToDo
@@ -90,7 +104,7 @@ Ich bin stolz auf meine Login-page, die ich gemacht habe.
 #### Wo wurde nicht auf meine Meinung eingegangen
 Wir haben miteinander diskutiert, welche Technologie wir brauchen, um Api Request zu machen. Ich habe ihm den Vorschlag gemacht Axios zu brauchen. Jedoch ist er nicht auf meine Meinung eingegangen und hat etwas anderes benutzt. Was jedoch am Ende sehr gut funktioniert hat. 
 
-#### Wobei konnte ich mit durchsetzen
+#### Wobei konnte ich mich durchsetzen
 Ich konnte mich durchsetzten, dass wir die application.properties nicht verändern, da es bis jetzt immer sehr gut funktioniert hat. 
 #### In welchen Punkten war sich die Gruppe einig
 Wir waren uns einig, dass Anthony das Frontend macht und ich weiter am Backend schreibe. 
@@ -101,7 +115,7 @@ Ich war darauf stolz, dass mein Backend sehr gut mit seinem Frontend funktionier
 > Anthony Peña Vargas
 #### Wo wurde nicht auf meine Meinung eingegangen
 Eigentlich gab es nichts wo nicht auf meine Meinung gehört wurde.
-#### Wobei konnte ich mit durchsetzen
+#### Wobei konnte ich mich durchsetzen
 Ich habe beim Frontend eigentlich komplette Kontrolle und ich konnte Giuliano davon überzeugen in die Response noch die UserID mitzugeben.
 #### In welchen Punkten war sich die Gruppe einig
 Wir waren uns einig 
@@ -111,19 +125,24 @@ Ich finde es gut, dass mein Javascript die Request richtig senden konnte und das
 ## 23/06/2022
 > Giuliano Gianola
 #### Wo wurde nicht auf meine Meinung eingegangen
+Ich wollte nicht, dass man eine Zwischentabelle macht für Actor und Film. Jedoch konnte mich Anthony dafür überzeugen, worauf ich kurze Zeit später eine Tabelle erstellt habe. Diese Tabelle wird dabei helfen mehrere Actors einem Film zuzuordnen. 
 
-#### Wobei konnte ich mit durchsetzen
+#### Wobei konnte ich mich durchsetzen
+Ich konnte mich durchsetzen, dass wir bei unserem Login-System eine Email-Adresse verwenden und keinen Usernamen. 
 
 #### In welchen Punkten war sich die Gruppe einig
+Wir waren uns einig, dass wir die Request nicht auf in einem Javascript-File machen, sondern in Spring. Dabei können wir Angriffe von aussen schützen. Damit können wir ausserdem Thymleafs benutzen, was unser Leben sehr vereinfacht. 
 
 #### Auf was bin ich stolz (oder eben nicht)
+Ich bin stolz, dass ich das Problem mit auto_increment lösen konnte. Das hat die Post-Request einfacher gemacht, da wir nicht direkt in der Datenbank die Auto_increments einstellen mussten. Nach einem Drop-create wären diese Einstellungen wieder weg. 
 
 ## 23/06/2022
 > Anthony Peña Vargas
 #### Wo wurde nicht auf meine Meinung eingegangen
 
-#### Wobei konnte ich mit durchsetzen
-
+#### Wobei konnte ich mich durchsetzen
+Ich konnte mich durchsetzen, dass ich mein Frontend ohne Vue.js mache und ich anstelle das Login in Spring boot schreibe. Ich konnte mich auch durchsetzen, bei Zwischentabelle für den FilmActor.
 #### In welchen Punkten war sich die Gruppe einig
-
+Wir waren uns einig, dass wir die Requests nicht über Javascript machen, sondern dass wir es im Controller mit Spring boot machen. Dabei können wir verhindern, dass jemand das Login vermeidet, indem er Javascript ausstellt oder den Code verändert.
 #### Auf was bin ich stolz (oder eben nicht)
+Ich war stolz, dass ich es geschafft habe ein Loginsystem zu programmieren und das es sehr gut funktioniert hat. Ich war nicht so stolz, dass beim mergen meine Änderungen verloren gegangen sind und ich sie nicht mehr rückgängig machen konnte.
