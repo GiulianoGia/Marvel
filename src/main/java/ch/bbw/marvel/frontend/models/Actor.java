@@ -7,18 +7,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity
 public class Actor {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private int actorID;
-    @NotNull
     private String firstname;
-    @NotNull
     private String lastname;
-    @NotNull
     private int age;
-    @NotNull
     private String img;
 
     public int getActorID() {
