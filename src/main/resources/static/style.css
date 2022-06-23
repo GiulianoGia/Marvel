@@ -1,6 +1,15 @@
+/* -- ELEMENT STYLING ------------------------------------------------------------------------------------------------*/
 body {
     font-family: sans-serif;
     margin: 0px;
+}
+
+body *:focus {
+    outline:none;
+    border-style: solid;
+    border-color: #0b7fd7;
+    border-radius: 7px;
+    border-width: 2px;
 }
 
 input:not(input[type="checkbox"]) {
@@ -11,14 +20,6 @@ input:disabled {
     background-color: #f0f0f0;
     cursor: not-allowed;
     pointer-events: none;
-}
-
-body *:focus {
-    outline:none;
-    border-style: solid;
-    border-color: #0b7fd7;
-    border-radius: 7px;
-    border-width: 2px;
 }
 
 a {
@@ -37,6 +38,8 @@ button:disabled {
     cursor:not-allowed;
 }
 
+
+/* -- FORM CLASS STYLING ---------------------------------------------------------------------------------------------*/
 
 .login-page {
     background-image: url("images/login-background.png");
@@ -80,6 +83,8 @@ button:disabled {
     margin-top: 20px;
 }
 
+/* -- BUTTON CLASS STYLING -------------------------------------------------------------------------------------------*/
+
 .button-red {
     background-color: #d20002;
     color: white;
@@ -110,6 +115,8 @@ button:disabled {
 .button-black:hover:not(.button-black:disabled) {
     background-color: #2d2d2d;
 }
+
+/* -- BUTTON IN FORM STYLING -----------------------------------------------------------------------------------------*/
 
 .form-container .button-red {
     margin: 20px 0px;
