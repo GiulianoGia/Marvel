@@ -1,6 +1,6 @@
-package ch.bbw.marvel.Backend.Repository;
+package ch.bbw.marvel.backend.repository;
 
-import ch.bbw.marvel.Backend.Models.Film;
+import ch.bbw.marvel.backend.models.Film;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

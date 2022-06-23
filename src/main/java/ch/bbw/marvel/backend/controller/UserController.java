@@ -1,7 +1,7 @@
-package ch.bbw.marvel.Backend.Controller;
+package ch.bbw.marvel.backend.controller;
 
-import ch.bbw.marvel.Backend.Models.User;
-import ch.bbw.marvel.Backend.Services.UserServiceInterface;
+import ch.bbw.marvel.backend.models.User;
+import ch.bbw.marvel.backend.services.UserServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:8081")
+@CrossOrigin(origins = "http://localhost:8080")
 public class UserController {
 
     @Autowired
