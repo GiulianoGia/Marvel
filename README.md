@@ -115,7 +115,7 @@ Ich war darauf stolz, dass mein Backend sehr gut mit seinem Frontend funktionier
 > Anthony Peña Vargas
 #### Wo wurde nicht auf meine Meinung eingegangen
 Eigentlich gab es nichts wo nicht auf meine Meinung gehört wurde.
-#### Wobei konnte ich mit durchsetzen
+#### Wobei konnte ich mich durchsetzen
 Ich habe beim Frontend eigentlich komplette Kontrolle und ich konnte Giuliano davon überzeugen in die Response noch die UserID mitzugeben.
 #### In welchen Punkten war sich die Gruppe einig
 Wir waren uns einig 
@@ -140,8 +140,9 @@ Ich bin stolz, dass ich das Problem mit auto_increment lösen konnte. Das hat di
 > Anthony Peña Vargas
 #### Wo wurde nicht auf meine Meinung eingegangen
 
-#### Wobei konnte ich mit durchsetzen
-
+#### Wobei konnte ich mich durchsetzen
+Ich konnte mich durchsetzen, dass ich mein Frontend ohne Vue.js mache und ich anstelle das Login in Spring boot schreibe. Ich konnte mich auch durchsetzen, bei Zwischentabelle für den FilmActor.
 #### In welchen Punkten war sich die Gruppe einig
-
+Wir waren uns einig, dass wir die Requests nicht über Javascript machen, sondern dass wir es im Controller mit Spring boot machen. Dabei können wir verhindern, dass jemand das Login vermeidet, indem er Javascript ausstellt oder den Code verändert.
 #### Auf was bin ich stolz (oder eben nicht)
+Ich war stolz, dass ich es geschafft habe ein Loginsystem zu programmieren und das es sehr gut funktioniert hat. Ich war nicht so stolz, dass beim mergen meine Änderungen verloren gegangen sind und ich sie nicht mehr rückgängig machen konnte.
