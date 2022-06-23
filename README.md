@@ -107,3 +107,23 @@ Ich habe beim Frontend eigentlich komplette Kontrolle und ich konnte Giuliano da
 Wir waren uns einig 
 #### Auf was bin ich stolz (oder eben nicht)
 Ich finde es gut, dass mein Javascript die Request richtig senden konnte und das es die Response richtig verarbeitet hat. Ich bin nicht so stolz, dass ich heute kaum weiter gekommen bin.
+
+## 23/06/2022
+> Giuliano Gianola
+#### Wo wurde nicht auf meine Meinung eingegangen
+
+#### Wobei konnte ich mit durchsetzen
+
+#### In welchen Punkten war sich die Gruppe einig
+
+#### Auf was bin ich stolz (oder eben nicht)
+
+## 23/06/2022
+> Anthony Peña Vargas
+#### Wo wurde nicht auf meine Meinung eingegangen
+
+#### Wobei konnte ich mit durchsetzen
+
+#### In welchen Punkten war sich die Gruppe einig
+
+#### Auf was bin ich stolz (oder eben nicht)
