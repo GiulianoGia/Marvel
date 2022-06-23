@@ -24,11 +24,14 @@ public class UserController {
     @GetMapping("/user/get")
     public User getUserByID(
             @RequestParam(value = "id", required = false) Integer id,
-            @RequestParam(value = "firstname", required = false) String firstname) {
+            @RequestParam(value = "firstname", required = false) String firstname,
+            @RequestParam(value = "email", required = false) String email) {
         if (id != null) {
             return userService.getUserByID(id);
         } else if (firstname != null) {
             return userService.getUserByFirstname(firstname);
+        } else if (email != null) {
+            return null;
         } else {
             return new User();
         }
