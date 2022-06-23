@@ -21,7 +21,11 @@ public class FilmService implements FilmServiceInterface{
 
     @Override
     public Film createFilm(Film film) {
-        System.out.println(film);
-        return filmRepository.createFilm(film.getCost(), film.getName(), film.getRating());
+        return filmRepository.createFilm(film.getFilmID(), film.getCost(), film.getName(), film.getRating());
+    }
+
+    @Override
+    public List<Film> getFilmByName(Film film) {
+        return filmRepository.getFilmByName(film.getName());
     }
 }

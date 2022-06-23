@@ -3,11 +3,13 @@ package ch.bbw.marvel.backend.models;
 import com.sun.istack.NotNull;
 
 import javax.persistence.*;
+import javax.validation.constraints.Null;
 
 
 @Entity
 public class Film {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int filmID;
     @NotNull
     private String name;
@@ -15,11 +17,21 @@ public class Film {
     private int cost;
     @NotNull
     private double rating;
+    @Null
+    private String image;
 
     public Film(Integer cost, String name, Double rating) {
+        this.filmID = 0;
         this.cost = cost;
         this.name = name;
         this.rating = rating;
+        this.image = "placeholder_film.png";
+    }
+
+    public Film() {}
+
+    public Film(String name) {
+        this.name = name;
     }
 
     public int getFilmID() {

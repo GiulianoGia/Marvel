@@ -22,9 +22,15 @@ public class FilmController {
         return filmService.getAllFilm();
     }
 
+    @GetMapping(value = "film/get", params = {"name"})
+    public List<Film> getFilmBy(@RequestParam("name") String name) {
+        Film film = new Film(name);
+        return filmService.getFilmByName(film);
+    }
+
     @PostMapping(value = "/film/new", params = {"cost", "name", "rating"})
     public Film createFilm(@RequestParam("cost") Integer cost, @RequestParam("name") String name, @RequestParam("rating") Double rating ) {
         Film film = new Film(cost, name, rating);
         return filmService.createFilm(film);
-    };
+    }
 }

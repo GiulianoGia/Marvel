@@ -8,4 +8,6 @@ public interface FilmServiceInterface {
     List<Film> getAllFilm();
 
     Film createFilm(Film film);
+
+    List<Film> getFilmByName(Film film);
 }
