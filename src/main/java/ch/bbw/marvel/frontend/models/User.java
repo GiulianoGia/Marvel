@@ -27,7 +27,6 @@ public class User {
     public User() {}
 
     public User(Integer age, String email, String firstname, String lastname, String password) {
-        this.id = (int)(Math.random() * (1000000000 - 1 + 1) + 1); // Generate a random number, because I don't know how to auto_increment the id
         this.age = age;
         this.email = email;
         this.firstname = firstname;
