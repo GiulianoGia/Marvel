@@ -4,10 +4,7 @@ import ch.bbw.marvel.frontend.models.User;
 import ch.bbw.marvel.frontend.service.LoginService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.CookieValue;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
@@ -27,6 +24,8 @@ public class FrontendController {
         return result;
     }
 
+// ---------------------------------------------------------------------------------------------------------------------
+// LOGIN-SYSTEM
     @GetMapping("/login")
     public String login(@CookieValue(name="currentUser", defaultValue="undefined.undefined") String cookieValue, Model model) {
 
@@ -81,4 +80,6 @@ public class FrontendController {
         response.addCookie(cookie);
         return "redirect:/login";
     }
+
+// ---------------------------------------------------------------------------------------------------------------------
 }
