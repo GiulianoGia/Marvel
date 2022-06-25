@@ -70,6 +70,15 @@ public class LoginService {
     }
 
 
+// ---------------------------------------------------------------------------------------------------------------------
+// REGISTER
+    public Cookie register(User user) {
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.getForObject(String.format("%s/user/new?age=%i&email=%s&firstname=%s&lastname=%s&password=%s",
+                API_HOST, user.getAge(), user.getEmail(), user.getFirstname(), user.getLastname(), user.getPassword()), String.class);
+        return login(user);
+    }
+
 
 // -----------------------------------------------------------------------------------------------------------------
 // SIGNATURE
