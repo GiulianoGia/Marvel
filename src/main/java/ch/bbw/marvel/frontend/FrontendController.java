@@ -68,8 +68,17 @@ public class FrontendController {
         String result = "register";
         if(cookie != null) {
             result = "redirect:/";
+            response.addCookie(cookie);
         }
 
         return result;
+    }
+
+    // logs out the user and redirect to the login page
+    @GetMapping("logout")
+    public String logout(HttpServletResponse response) {
+        Cookie cookie = new Cookie("currentUser", null);
+        response.addCookie(cookie);
+        return "redirect:/login";
     }
 }
