@@ -10,7 +10,7 @@
 </head>
 <body class="login-page">
 <h1 class="form-title">Marvel<a>+</a></h1>
-<form class="form-container" action="#" th:action="@{/login}" method="post">
+<form class="form-container" action="#" th:action="@{/register}" onsubmit="disable_input()" method="post">
     <div class="input-container">
         <div>Firstname</div>
         <input type="text" th:field="${user.firstname}"/>
@@ -30,7 +30,7 @@
         <div>age</div>
         <input type="number" th:field="${user.age}"/>
     </div>
-    <button type="button" id="login_button" class="button-red" onclick="register(this)"><img src="images/loading.gif" width="20px" hidden="true"/>Create Account</button>
+    <button type="submit" id="login_button" class="button-red" disabled>Create Account</button>
 </form>
 </body>
 </html>
