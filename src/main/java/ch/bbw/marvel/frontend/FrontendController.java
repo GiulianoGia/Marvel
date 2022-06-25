@@ -1,6 +1,7 @@
 package ch.bbw.marvel.frontend;
 
 import ch.bbw.marvel.frontend.models.User;
+import ch.bbw.marvel.frontend.service.FilmService;
 import ch.bbw.marvel.frontend.service.LoginService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +16,7 @@ public class FrontendController {
 // ---------------------------------------------------------------------------------------------------------------------
 // ATTRIBUTES
     private LoginService loginService = new LoginService();
+    private FilmService filmService = new FilmService();
 
 // ---------------------------------------------------------------------------------------------------------------------
 // LOGIN-SYSTEM
@@ -80,10 +82,13 @@ public class FrontendController {
 // LOGGED-IN AREA
 
     @GetMapping("/")
-    public String index(@CookieValue(name="currentUser", defaultValue="undefined.undefined") String currentUser) {
+    public String index(@CookieValue(name="currentUser", defaultValue="undefined.undefined") String currentUser,
+                        Model model) {
+
         String result = "redirect:/login";
         if(loginService.hasUser(currentUser)) {
             result = "index.html";
+            model.addAttribute("films", filmService.getAllFilms());
         }
         return result;
     }
