@@ -19,9 +19,12 @@ public class FrontendController {
 
 
     @GetMapping("/")
-    public String index() {
-
-        return "index.html";
+    public String index(@CookieValue(name="currentUser") String currentUser) {
+        String result = "redirect:/login";
+        if(loginService.hasUser("currentUser")) {
+            result = "index.html";
+        }
+        return result;
     }
 
     @GetMapping("/login")
@@ -43,6 +46,28 @@ public class FrontendController {
         if(cookie != null) {
             result = "redirect:/";
             response.addCookie(cookie);
+        }
+
+        return result;
+    }
+
+
+    @GetMapping("/register")
+    public String register(@CookieValue(name="currentUser") String currentUser, Model model) {
+        String result = "redirect:/";
+        if(loginService.hasUser(currentUser)) {
+            result = "register";
+            model.addAttribute("user", new User());
+        }
+        return result;
+    }
+
+    @PostMapping("/register")
+    public String register(@ModelAttribute User user, HttpServletResponse response) {
+        Cookie cookie = loginService.register(user);
+        String result = "register";
+        if(cookie != null) {
+            result = "redirect:/";
         }
 
         return result;
