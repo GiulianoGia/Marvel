@@ -63,8 +63,12 @@ Für die Erstellung eines Controllers rechnen wir mit einer halben bis einer Stu
 Wir nutzen MariaDB für eine. Für den User wird jeder Username unique sein. Als Webframework nutzen wir spring boot. Als Version Control System haben wir uns für Github entschieden, da wir so gemeinsam an einem Projekt arbeiten können und man kann es einfach mit IntelliJ nutzen.
 ## Realisieren
 ### Backend
+> Giuliano Gianola
 
 ### Frontend
+> Anthony Peña Vargas
+#### Login
+Für das Frontend habe ich mit der Loginpage begonnen. Hier habe ich zuerst die Struktur mit HTML gemacht und danach habe ich ein CSS geschrieben. Ich habe die Skizze, die wir gemacht haben zur Hilfe genommen. Damit sich die Loginpage so verhaltet, wie ich es wollte, habe ich noch JavaScript reingemacht. Mit dem JavaScript habe ich den Knopf und das Inputfeld deaktiviert, wenn ich auf submit klicke. Ich habe hier auch gemacht, dass sich der Button aktivieren sollte, wenn ich alle Felder ausgefüllt habe. Im PostMapping wird dann noch überprüft, ob dieser User existiert, indem es ein Request auf unser Backend schickt. Wenn das gleich ist, dann wird ein neues Cookie erstellt. Der Wert besteht aus der ID des Users und mit einer Signatur, dass beweist, dass dieses Cookie vom Server ausgestellt wurde. Man wird weitergeleitet zur Indexseite. Wenn man ein güliges Cookie hat, dann kommt man nicht mahr auf die Loginpage.
 
 ## Kontrollieren
 ## Auswerten
