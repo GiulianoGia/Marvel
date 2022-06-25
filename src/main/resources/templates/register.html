@@ -30,6 +30,14 @@
         <div>age</div>
         <input type="number" th:field="${user.age}"/>
     </div>
+    <div>
+        <div>Password</div>
+        <input type="password" th:field="${user.password}"/>
+    </div>
+    <div>
+        <div>Confirm Password</div>
+        <input type="password" th:field="${user.confirmPassword}"/>
+    </div>
     <button type="submit" id="login_button" class="button-red" disabled>Create Account</button>
 </form>
 </body>
