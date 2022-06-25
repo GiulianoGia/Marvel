@@ -1,5 +1,6 @@
 package ch.bbw.marvel.frontend.service;
 
+import ch.bbw.marvel.frontend.Config;
 import ch.bbw.marvel.frontend.models.Login;
 import ch.bbw.marvel.frontend.models.User;
 import org.springframework.stereotype.Service;
@@ -15,8 +16,7 @@ public class LoginService {
 
 // ---------------------------------------------------------------------------------------------------------------------
 // CONSTANTS
-    private final String SECRET_KEY = "_hogwarts";
-    public static final String API_HOST = "http://localhost:8080";
+
 
 // ---------------------------------------------------------------------------------------------------------------------
 // ATTRIBUTES
@@ -34,7 +34,7 @@ public class LoginService {
                 if(checkSignature(values[0], values[1])) {
                     // sends a request to the API to get the User
                     RestTemplate restTemplate = new RestTemplate();
-                    user = restTemplate.getForObject(String.format("%s/user/get?id=%s",API_HOST, values[0]),
+                    user = restTemplate.getForObject(String.format("%s/user/get?id=%s", Config.API_HOST, values[0]),
                              User.class);
                 }
             }
@@ -53,7 +53,7 @@ public class LoginService {
 
     public Cookie login(User user) {
         RestTemplate restTemplate = new RestTemplate();
-        Login login = restTemplate.getForObject(String.format("%s/user/login?email=%s&password=%s", API_HOST,
+        Login login = restTemplate.getForObject(String.format("%s/user/login?email=%s&password=%s", Config.API_HOST,
                 user.getEmail(), user.getPassword()), Login.class);
 
         Cookie cookie = null;
@@ -75,11 +75,11 @@ public class LoginService {
     public Cookie register(User user) {
         RestTemplate restTemplate = new RestTemplate();
         Cookie cookie = null;
-        Login login = restTemplate.getForObject(String.format("%s/user/login?email=%s&password=%s", API_HOST,
+        Login login = restTemplate.getForObject(String.format("%s/user/login?email=%s&password=%s", Config.API_HOST,
                 user.getEmail(), user.getPassword()), Login.class);
         if(user.getPassword().equals(user.getConfirmPassword()) && !login.isWorked()) {
             restTemplate.postForLocation(String.format("%s/user/new?age=%d&email=%s&firstname=%s&lastname=%s&password=%s",
-                    API_HOST, user.getAge(), user.getEmail(), user.getFirstname(), user.getLastname(), user.getPassword()), null);
+                    Config.API_HOST, user.getAge(), user.getEmail(), user.getFirstname(), user.getLastname(), user.getPassword()), null);
             cookie = login(user);
         }
         return cookie;
@@ -90,7 +90,7 @@ public class LoginService {
 // SIGNATURE
     private String createSignature(String originalMessage) throws NoSuchAlgorithmException {
         MessageDigest digest = MessageDigest.getInstance("SHA-256");
-        byte[] encodedhash = digest.digest((originalMessage + SECRET_KEY).getBytes(StandardCharsets.UTF_8));
+        byte[] encodedhash = digest.digest((originalMessage + Config.SECRET_KEY).getBytes(StandardCharsets.UTF_8));
 
         // builds a hexstring
         String signature = bytesToHex(encodedhash);
