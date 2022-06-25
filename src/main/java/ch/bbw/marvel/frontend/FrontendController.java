@@ -19,9 +19,9 @@ public class FrontendController {
 
 
     @GetMapping("/")
-    public String index(@CookieValue(name="currentUser") String currentUser) {
+    public String index(@CookieValue(name="currentUser", defaultValue="undefined.undefined") String currentUser) {
         String result = "redirect:/login";
-        if(loginService.hasUser("currentUser")) {
+        if(loginService.hasUser(currentUser)) {
             result = "index.html";
         }
         return result;
@@ -53,9 +53,9 @@ public class FrontendController {
 
 
     @GetMapping("/register")
-    public String register(@CookieValue(name="currentUser") String currentUser, Model model) {
+    public String register(@CookieValue(name="currentUser", defaultValue="undefined.undefined") String currentUser, Model model) {
         String result = "redirect:/";
-        if(loginService.hasUser(currentUser)) {
+        if(!loginService.hasUser(currentUser)) {
             result = "register";
             model.addAttribute("user", new User());
         }
