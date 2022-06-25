@@ -20,6 +20,7 @@ public class User {
 
     @NotNull
     private String password;
+    private String confirmPassword;
     private Date lastLoggedIn;
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -84,6 +85,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public void setConfirmPassword(String confirmPassword) {
+        this.confirmPassword = confirmPassword;
+    }
+
+    public String getConfirmPassword() {
+        return confirmPassword;
     }
 
     public Date getLastLoggedIn() {
