@@ -125,7 +125,9 @@ LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 INSERT INTO `user` VALUES
 (45972814,16,'test@test','test','2022-06-23 19:48:29','test','test'),
-(551574415,16,'anthony.pena@lernende.bbw.ch','Anthony','2022-06-25 15:44:22','Peña','test');
+(138716208,19,'anthony.pena@marvelplus.ch','Anthony Javier','2022-06-25 15:57:42','Peña Vargas','null'),
+(551574415,16,'anthony.pena@lernende.bbw.ch','Anthony','2022-06-25 16:45:17','Peña','test'),
+(610305875,0,'','','2022-06-25 16:25:26','','test');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -138,4 +140,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-25 15:45:45
+-- Dump completed on 2022-06-25 16:46:45
