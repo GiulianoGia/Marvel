@@ -1,20 +1,33 @@
-package ch.bbw.marvel.frontend.models;
+package ch.bbw.marvel.frontend.models;;
 
+// IMPORTS
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 public class User {
+
+// ---------------------------------------------------------------------------------------------------------------------
+// ATTRIBUTES
     private int id;
     private String firstname;
     private String lastname;
     private int age;
+
+    @NotNull
+    @Email
     private String email;
+
+    @NotNull
     private String password;
+    private String confirmPassword;
     private Date lastLoggedIn;
 
+// ---------------------------------------------------------------------------------------------------------------------
+// CONSTRUCTORS
     public User() {}
 
     public User(Integer age, String email, String firstname, String lastname, String password) {
-        this.id = (int)(Math.random() * (1000000000 - 1 + 1) + 1); // Generate a random number, because I don't know how to auto_increment the id
         this.age = age;
         this.email = email;
         this.firstname = firstname;
@@ -22,6 +35,9 @@ public class User {
         this.password = password;
         this.lastLoggedIn = new Date(System.currentTimeMillis());
     }
+
+// ---------------------------------------------------------------------------------------------------------------------
+// GETTER AND SETTER
 
     public Integer getId() {
         return id;
@@ -69,6 +85,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public void setConfirmPassword(String confirmPassword) {
+        this.confirmPassword = confirmPassword;
+    }
+
+    public String getConfirmPassword() {
+        return confirmPassword;
     }
 
     public Date getLastLoggedIn() {

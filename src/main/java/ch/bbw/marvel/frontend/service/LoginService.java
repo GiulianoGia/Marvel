@@ -70,6 +70,21 @@ public class LoginService {
     }
 
 
+// ---------------------------------------------------------------------------------------------------------------------
+// REGISTER
+    public Cookie register(User user) {
+        RestTemplate restTemplate = new RestTemplate();
+        Cookie cookie = null;
+        Login login = restTemplate.getForObject(String.format("%s/user/login?email=%s&password=%s", API_HOST,
+                user.getEmail(), user.getPassword()), Login.class);
+        if(user.getPassword().equals(user.getConfirmPassword()) && !login.isWorked()) {
+            restTemplate.postForLocation(String.format("%s/user/new?age=%d&email=%s&firstname=%s&lastname=%s&password=%s",
+                    API_HOST, user.getAge(), user.getEmail(), user.getFirstname(), user.getLastname(), user.getPassword()), null);
+            cookie = login(user);
+        }
+        return cookie;
+    }
+
 
 // -----------------------------------------------------------------------------------------------------------------
 // SIGNATURE

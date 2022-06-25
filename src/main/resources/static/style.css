@@ -1,15 +1,7 @@
+/* -- ELEMENT STYLING ------------------------------------------------------------------------------------------------*/
 body {
     font-family: sans-serif;
     margin: 0px;
-}
-
-input:not(input[type="checkbox"]) {
-    width: 100%;
-}
-
-input:disabled {
-    background-color: #f0f0f0;
-    cursor: not-allowed;
 }
 
 body *:focus {
@@ -20,6 +12,16 @@ body *:focus {
     border-width: 2px;
 }
 
+input:not(input[type="checkbox"]) {
+    width: 100%;
+}
+
+input:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
 a {
     color: #65a3d1;
 }
@@ -28,7 +30,7 @@ button {
     height: 50px;
     width: 100%;
 }
-button:hover {
+button:hover:not(button:disabled) {
     cursor:pointer;
 }
 
@@ -36,6 +38,8 @@ button:disabled {
     cursor:not-allowed;
 }
 
+
+/* -- FORM CLASS STYLING ---------------------------------------------------------------------------------------------*/
 
 .login-page {
     background-image: url("images/login-background.png");
@@ -79,6 +83,8 @@ button:disabled {
     margin-top: 20px;
 }
 
+/* -- BUTTON CLASS STYLING -------------------------------------------------------------------------------------------*/
+
 .button-red {
     background-color: #d20002;
     color: white;
@@ -91,7 +97,7 @@ button:disabled {
     background-color: #af4748;
 }
 
-.button-red:hover:not(.button-red[disabled="disabled"]) {
+.button-red:hover:not(.button-red:disabled) {
     background-color: #ff0003;
 }
 
@@ -106,9 +112,11 @@ button:disabled {
     background-color: #333030;
 }
 
-.button-black:hover:not(.button-black[disabled="disabled"]) {
+.button-black:hover:not(.button-black:disabled) {
     background-color: #2d2d2d;
 }
+
+/* -- BUTTON IN FORM STYLING -----------------------------------------------------------------------------------------*/
 
 .form-container .button-red {
     margin: 20px 0px;
