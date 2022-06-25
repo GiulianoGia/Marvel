@@ -13,31 +13,22 @@
 <form class="form-container" action="#" th:action="@{/login}" method="post">
     <div class="input-container">
         <div>Firstname</div>
-        <input type="text" id="firstname"/>
+        <input type="text" th:field="${user.firstname}"/>
     </div>
 
     <div class="input-container">
-        <div>surname</div>
-        <input type="text" id="surname"/>
+        <div>Lastname</div>
+        <input type="text" th:field="${user.lastname}"/>
     </div>
 
     <div class="input-container">
         <div>Email</div>
-        <input type="email" id="email"/>
+        <input type="email" th:field="${user.email}"/>
     </div>
 
     <div class="input-container">
         <div>age</div>
-        <input type="number" id="age"/>
-    </div>
-
-    <div class="input-container">
-        <input type="checkbox" id="datenschutz"/>
-        <label for="datenschutz">Datenschutzrichtlinien</label>
-    </div>
-    <div>
-        <input type="checkbox" id="newsletter"/>
-        <label for="newsletter">I want subscribe the Marvel+ Newsletter</label>
+        <input type="number" th:field="${user.age}"/>
     </div>
     <button type="button" id="login_button" class="button-red" onclick="register(this)"><img src="images/loading.gif" width="20px" hidden="true"/>Create Account</button>
 </form>
