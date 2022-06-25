@@ -12,22 +12,15 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 public class FrontendController {
 
+// ---------------------------------------------------------------------------------------------------------------------
+// ATTRIBUTES
     private LoginService loginService = new LoginService();
-
-
-    @GetMapping("/")
-    public String index(@CookieValue(name="currentUser", defaultValue="undefined.undefined") String currentUser) {
-        String result = "redirect:/login";
-        if(loginService.hasUser(currentUser)) {
-            result = "index.html";
-        }
-        return result;
-    }
 
 // ---------------------------------------------------------------------------------------------------------------------
 // LOGIN-SYSTEM
     @GetMapping("/login")
-    public String login(@CookieValue(name="currentUser", defaultValue="undefined.undefined") String cookieValue, Model model) {
+    public String login(@CookieValue(name="currentUser", defaultValue="undefined.undefined") String cookieValue,
+                        Model model) {
 
         String result = "login";
         if(loginService.hasUser(cookieValue)) {
@@ -52,7 +45,9 @@ public class FrontendController {
 
 
     @GetMapping("/register")
-    public String register(@CookieValue(name="currentUser", defaultValue="undefined.undefined") String currentUser, Model model) {
+    public String register(@CookieValue(name="currentUser", defaultValue="undefined.undefined") String currentUser,
+                           Model model) {
+
         String result = "redirect:/";
         if(!loginService.hasUser(currentUser)) {
             result = "register";
@@ -82,4 +77,16 @@ public class FrontendController {
     }
 
 // ---------------------------------------------------------------------------------------------------------------------
+// LOGGED-IN AREA
+
+    @GetMapping("/")
+    public String index(@CookieValue(name="currentUser", defaultValue="undefined.undefined") String currentUser) {
+        String result = "redirect:/login";
+        if(loginService.hasUser(currentUser)) {
+            result = "index.html";
+        }
+        return result;
+    }
+
+
 }
