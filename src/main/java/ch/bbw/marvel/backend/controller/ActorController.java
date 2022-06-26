@@ -1,6 +1,7 @@
 package ch.bbw.marvel.backend.controller;
 
 import ch.bbw.marvel.backend.services.ActorService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import ch.bbw.marvel.backend.models.Actor;
 
@@ -9,6 +10,7 @@ import java.util.List;
 @RestController
 @CrossOrigin(origins = "http://localhost:8081")
 public class ActorController {
+    @Autowired
     ActorService actorService;
 
     @GetMapping("/actors/all")
