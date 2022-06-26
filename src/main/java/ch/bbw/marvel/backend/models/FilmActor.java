@@ -17,7 +17,18 @@ public class FilmActor {
     @JoinColumn(name = "film_film_id")
     private Film film;
 
+    public FilmActor(int filmID, int actorID) {
+    }
+
     public Actor getActor() {
         return actor;
+    }
+
+    public Integer getFilmID() {
+        return film.getFilmID();
+    }
+
+    public Integer getActorID() {
+        return actor.getActorID();
     }
 }

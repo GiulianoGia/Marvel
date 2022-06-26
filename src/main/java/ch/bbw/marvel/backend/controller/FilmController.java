@@ -31,6 +31,11 @@ public class FilmController {
     @PostMapping(value = "/film/new", params = {"cost", "name", "rating"})
     public Film createFilm(@RequestParam("cost") Integer cost, @RequestParam("name") String name, @RequestParam("rating") Double rating ) {
         Film film = new Film(cost, name, rating);
-        return filmService.createFilm(film);
+        if (filmService.getFilmByName(film) == null) {
+            return filmService.createFilm(film);
+        }
+        else {
+            return null;
+        }
     }
 }
