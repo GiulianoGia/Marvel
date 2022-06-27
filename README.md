@@ -10,13 +10,13 @@ Damit wir eine Datenbank-Anbindung machen könnnen mussten wir zuerst recherchie
 
 | User | Film | Actor | Film_Actor
 | ------------- | -----------| ---------- | -------------- |
-| id `int`  | filmid `int` | actorid `int` | id `int` |
-|  firstname `string`  | name `int` | age `int` | actor_actor_id `int` |
-| lastname `string` | image `string` | firstname `string` | film_film_id `int` |
-| email `string` | video `string` | lastname `string` |
-| age `int` | selected `boolean` | img `string` |
-| password `string` | actorsIDFS `int` |
-| lastlogin `localdatetime` | budget `double`
+| id `int`  || filmid `int` || actorid `int` || id `int` |
+|  firstname `string`  || name `int` || age `int` || actor_actor_id `int` |
+| lastname `string` || image `string` || firstname `string` || film_film_id `int` |
+| email `string` || video `string` || lastname `string` |
+| age `int` || selected `boolean` || img `string` |
+| password `string` || actorsIDFS `int` |
+| lastlogin `localdatetime` || budget `double`
 
 | Film |
 | ---- |
