@@ -8,8 +8,8 @@ Unser Ziel ist es eine Webapplikation zu machen, welche im Hintergrund eine Date
 
 Damit wir eine Datenbank-Anbindung machen könnnen mussten wir zuerst recherchieren, wie man die dependencies für eine MariaDB konfiguriert. Als nächstes war noch unklar, wie die Repository mit Hilfe von Querys Datenbank abragen machen kann. Die nächste Sache, die ausserdem geklärt werden musste, wie wir unsere Datenbank aufbauen werden. Wie folgt werden unsere Entity's aussehen:
 
-| User | Film | Actor | Film_Actor
-| ------------- | -----------| ---------- | -------------- |
+| User || Film || Actor || Film_Actor
+| ------------- || -----------|| ---------- || -------------- |
 | id `int`  || filmid `int` || actorid `int` || id `int` |
 |  firstname `string`  || name `int` || age `int` || actor_actor_id `int` |
 | lastname `string` || image `string` || firstname `string` || film_film_id `int` |
