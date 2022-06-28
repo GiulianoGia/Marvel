@@ -13,16 +13,16 @@
     <form class="form-container" action="#" th:action="@{/login}" method="post" onfo>
         <div class="input-container">
           <div>Email</div>
-          <input type="email" id="email"/>
+          <input type="email" th:field="${user.email}"/>
         </div>
 
         <div class="input-container">
           <div>Password</div>
-          <input type="password" id="password"/>
+          <input type="password" th:field="${user.password}"/>
         </div>
 
         <p><a href="/forgetpassword">Forget Password</a><a href="/register" style="float: right;">create account</a></p>
-        <button type="button" id="login_button" class="button-red" onclick="login(this)"><img src="images/loading.gif" width="20px" hidden="true"/>Login</button>
+        <button type="submit" id="login_button" class="button-red" disabled>Login</button>
     </form>
 </body>
 </html>

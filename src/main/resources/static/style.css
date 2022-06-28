@@ -1,15 +1,7 @@
+/* -- ELEMENT STYLING ------------------------------------------------------------------------------------------------*/
 body {
     font-family: sans-serif;
     margin: 0px;
-}
-
-input:not(input[type="checkbox"]) {
-    width: 100%;
-}
-
-input:disabled {
-    background-color: #f0f0f0;
-    cursor: not-allowed;
 }
 
 body *:focus {
@@ -20,6 +12,16 @@ body *:focus {
     border-width: 2px;
 }
 
+input:not(input[type="checkbox"]) {
+    width: 100%;
+}
+
+input:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
 a {
     color: #65a3d1;
 }
@@ -28,7 +30,7 @@ button {
     height: 50px;
     width: 100%;
 }
-button:hover {
+button:hover:not(button:disabled) {
     cursor:pointer;
 }
 
@@ -36,6 +38,13 @@ button:disabled {
     cursor:not-allowed;
 }
 
+iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* -- FORM CLASS STYLING ---------------------------------------------------------------------------------------------*/
 
 .login-page {
     background-image: url("images/login-background.png");
@@ -79,6 +88,8 @@ button:disabled {
     margin-top: 20px;
 }
 
+/* -- BUTTON CLASS STYLING -------------------------------------------------------------------------------------------*/
+
 .button-red {
     background-color: #d20002;
     color: white;
@@ -91,7 +102,7 @@ button:disabled {
     background-color: #af4748;
 }
 
-.button-red:hover:not(.button-red[disabled="disabled"]) {
+.button-red:hover:not(.button-red:disabled) {
     background-color: #ff0003;
 }
 
@@ -106,10 +117,63 @@ button:disabled {
     background-color: #333030;
 }
 
-.button-black:hover:not(.button-black[disabled="disabled"]) {
+.button-black:hover:not(.button-black:disabled) {
     background-color: #2d2d2d;
 }
 
+/* -- BUTTON IN FORM STYLING -----------------------------------------------------------------------------------------*/
+
 .form-container .button-red {
     margin: 20px 0px;
+}
+
+/* -- INDEX PAGE STYLING ---------------------------------------------------------------------------------------------*/
+
+.poster {
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    height: 200px;
+    background-image: url("/images/placeholder_film.png");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 150px;
+}
+
+.poster:hover {
+    border: #d20002 solid 2px;
+    cursor: pointer;
+}
+
+.poster img {
+    width: 150px;
+    height: 200px;
+}
+
+.black-overlap {
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0, 0, 0, .50);
+    width: 100%;
+    height: 100%;
+
+}
+
+.poster span {
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+}
+
+/* -- FILM PAGE ------------------------------------------------------------------------------------------------------*/
+.rating {
+    color: #d20002;
+}
+
+.rating span {
+    color: lightgrey;
 }
