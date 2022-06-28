@@ -38,6 +38,11 @@ button:disabled {
     cursor:not-allowed;
 }
 
+iframe {
+    display: block;
+    margin: 0 auto;
+}
+
 
 /* -- FORM CLASS STYLING ---------------------------------------------------------------------------------------------*/
 
@@ -162,4 +167,13 @@ button:disabled {
     position: absolute;
     bottom: 20px;
     left: 10px;
+}
+
+/* -- FILM PAGE ------------------------------------------------------------------------------------------------------*/
+.rating {
+    color: #d20002;
+}
+
+.rating span {
+    color: lightgrey;
 }

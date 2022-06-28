@@ -1,6 +1,7 @@
 package ch.bbw.marvel.frontend;
 
 import ch.bbw.marvel.frontend.models.User;
+import ch.bbw.marvel.frontend.service.FrontendActorService;
 import ch.bbw.marvel.frontend.service.FrontendFilmService;
 import ch.bbw.marvel.frontend.service.LoginService;
 import org.springframework.stereotype.Controller;
@@ -17,6 +18,7 @@ public class FrontendController {
 // ATTRIBUTES
     private LoginService loginService = new LoginService();
     private FrontendFilmService filmService = new FrontendFilmService();
+    private FrontendActorService actorService = new FrontendActorService();
 
 // ---------------------------------------------------------------------------------------------------------------------
 // LOGIN-SYSTEM
@@ -101,6 +103,7 @@ public class FrontendController {
         if(loginService.hasUser(currentUser)) {
             result = "film";
             model.addAttribute("film", filmService.getFilm(name));
+            model.addAttribute("actor", actorService.getActorByName(""));
         }
 
         return result;
