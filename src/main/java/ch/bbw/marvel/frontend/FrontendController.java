@@ -103,7 +103,7 @@ public class FrontendController {
         if(loginService.hasUser(currentUser)) {
             result = "film";
             model.addAttribute("film", filmService.getFilm(name));
-            model.addAttribute("actor", actorService.getActorByName(""));
+            model.addAttribute("actors", actorService.getAllActors());
         }
 
         return result;

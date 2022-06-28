@@ -1,0 +1,12 @@
+<div class="header" th:fragment="header">
+    <a href="/">homepage</a>
+    <div>
+        <span class="profile" onclick="$(this).parent().find('ul').toggle()">profile</span>
+        <ul hidden>
+            <li>Profile</li>
+            <li>Favorites</li>
+            <li>Logout</li>
+        </ul>
+
+    </div>
+</div>
