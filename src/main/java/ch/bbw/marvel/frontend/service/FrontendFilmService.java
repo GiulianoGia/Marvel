@@ -34,6 +34,13 @@ public class FrontendFilmService {
         return films.get(0);
     }
 
+    public List<Film> getBestRatingFilms() {
+        ResponseEntity<List<Film>> response = restTemplate.exchange(Config.API_HOST + "/films/best", HttpMethod.GET,
+                null, new ParameterizedTypeReference<List<Film>>() {});
+        List<Film> films = response.getBody();
+        return films;
+    }
+
 // ---------------------------------------------------------------------------------------------------------------------
 // POST-FILM
 }

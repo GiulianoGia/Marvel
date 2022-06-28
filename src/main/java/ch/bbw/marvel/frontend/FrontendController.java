@@ -92,6 +92,7 @@ public class FrontendController {
             result = "index.html";
             System.out.println(filmService.getAllFilms().get(0));
             model.addAttribute("films", filmService.getAllFilms());
+            model.addAttribute("bestFilms", filmService.getBestRatingFilms());
         }
         return result;
     }

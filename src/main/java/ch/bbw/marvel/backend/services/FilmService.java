@@ -28,4 +28,9 @@ public class FilmService implements FilmServiceInterface{
     public List<Film> getFilmByName(Film film) {
         return filmRepository.getFilmByName(film.getName());
     }
+
+    @Override
+    public List<Film> getBestRatingFilms() {
+        return filmRepository.getBestRatingFilms();
+    }
 }

@@ -5,13 +5,36 @@
     <title>Marvel+</title>
     <link rel="stylesheet" href="style.css"/>
 </head>
-<body>
-    <div th:each="film : ${films}" class="poster" th:onclick="'window.location =' + '\'' + @{/film?name={name}(name=${film.name})} + '\''">
-        <img th:src="@{/images/{image}(image=${film.image})}" th:alt="${film.name}" onerror="this.style.display ='none'"/>
-        <div class="black-overlap">
-            <span th:text="${film.name}"></span>
+<body style="background-color: black">
+    <div class="top-section">
+        <img class="background__image" src="/images/background.png">
+    </div>
+    <div class="film__collection">
+        <h1>All Films</h1>
+        <div class="flex-box">
+            <div th:each="film : ${films}" class="poster" th:onclick="'window.location =' + '\'' + @{/film?name={name}(name=${film.name})} + '\''">
+                <img th:src="@{/images/{image}(image=${film.image})}" th:alt="${film.name}"/>
+                <div class="black-overlap">
+                    <span th:text="${film.name}"></span>
+                </div>
+            </div>
         </div>
-
+    </div>
+    <div class="film__collection">
+        <h1>Top 5</h1>
+        <div class="flex-box">
+            <div class="ranking" th:each="film, index : ${bestFilms}">
+                <div class="ranking__container">
+                    <h1 class="ranking__count" th:text="${index.count}"></h1>
+                </div>
+                <div class="poster" style="margin-left: -10px" th:onclick="'window.location =' + '\'' + @{/film?name={name}(name=${film.name})} + '\''">
+                    <img th:src="@{/images/{image}(image=${film.image})}" th:alt="${film.name}"/>
+                    <div class="black-overlap">
+                        <span th:text="${film.name}"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

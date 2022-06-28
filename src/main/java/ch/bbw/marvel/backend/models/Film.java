@@ -20,12 +20,12 @@ public class Film {
     @Null
     private String image;
 
-    public Film(Integer cost, String name, Double rating) {
+    public Film(Integer cost, String name, Double rating, String image) {
         this.filmID = 0;
         this.cost = cost;
         this.name = name;
         this.rating = rating;
-        this.image = "placeholder_film.png";
+        this.image = image != null ? image : "placeholder_film.png";
     }
 
     public Film() {}

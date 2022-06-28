@@ -10,4 +10,6 @@ public interface FilmServiceInterface {
     Film createFilm(Film film);
 
     List<Film> getFilmByName(Film film);
+
+    List<Film> getBestRatingFilms();
 }
