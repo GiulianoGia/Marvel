@@ -31,9 +31,9 @@ public class FilmController {
         return filmService.getFilmByName(film);
     }
 
-    @PostMapping(value = "/film/new", params = {"cost", "name", "rating", "image"})
-    public Map<String, Boolean> createFilm(@RequestParam("cost") Integer cost, @RequestParam("name") String name, @RequestParam("rating") Double rating, @RequestParam("image") String image) {
-        Film film = new Film(cost, name, rating, image);
+    @PostMapping(value = "/film/new", params = {"cost", "name", "rating", "image", "description", "video"})
+    public Map<String, Boolean> createFilm(@RequestParam("cost") Integer cost, @RequestParam("name") String name, @RequestParam("rating") Double rating, @RequestParam("image") String image, @RequestParam("description") String description, @RequestParam("video") String video) {
+        Film film = new Film(cost, name, rating, image, description, video);
         if (filmService.getFilmByName(film).isEmpty()) {
             filmService.createFilm(film);
             return Collections.singletonMap("worked", true);
