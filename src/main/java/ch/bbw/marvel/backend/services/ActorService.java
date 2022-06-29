@@ -22,4 +22,9 @@ public class ActorService implements ActorServiceInterface{
     public Actor createActor(Actor actor) {
         return actorRepository.createActor(actor.getActorID(), actor.getAge(), actor.getFirstname(), actor.getImg(), actor.getLastname());
     }
+
+    @Override
+    public List<Actor> sortByAge(int age) {
+        return actorRepository.sortByAge(age);
+    }
 }

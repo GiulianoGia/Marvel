@@ -23,4 +23,7 @@ public interface FilmRepository extends JpaRepository<Film, Integer> {
 
     @Query(value="select * from film order by rating desc limit 5", nativeQuery = true)
     List<Film> getBestRatingFilms();
+
+    @Query(value="update film set rating = :rating where filmid = :id", nativeQuery = true)
+    void changeRating(@Param("id") Integer id, @Param("rating") Double rating);
 }

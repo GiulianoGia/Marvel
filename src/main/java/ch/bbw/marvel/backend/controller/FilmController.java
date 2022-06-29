@@ -44,6 +44,18 @@ public class FilmController {
 
     }
 
+    // change rating of a film by id
+    @PostMapping(value = "/film/changeRating", params = {"id", "rating"})
+    public Map<String, Boolean> changeRating(@RequestParam("id") Integer id, @RequestParam("rating") Double rating) {
+        try {
+            filmService.changeRating(id, rating);
+            return Collections.singletonMap("worked", true);
+        }
+        catch (Exception e) {
+            return Collections.singletonMap("worked", false);
+        }
+    }
+
     @GetMapping(value = "/films/best")
     public List<Film> getBestRatingFilms() {
         return filmService.getBestRatingFilms();

@@ -147,6 +147,7 @@ iframe {
 .flex-box {
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
     align-items: center;
 }
 .ranking__container {
@@ -176,6 +177,7 @@ iframe {
     background-attachment: scroll;
     background-size: 150px;
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .poster:hover {

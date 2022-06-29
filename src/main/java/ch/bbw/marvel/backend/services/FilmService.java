@@ -33,4 +33,9 @@ public class FilmService implements FilmServiceInterface{
     public List<Film> getBestRatingFilms() {
         return filmRepository.getBestRatingFilms();
     }
+
+    @Override
+    public void changeRating(int filmID, Double rating) {
+        filmRepository.changeRating(filmID, rating);
+    }
 }
