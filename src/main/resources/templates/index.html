@@ -21,6 +21,17 @@
         </div>
     </div>
     <div class="film__collection">
+        <h1>Your Collection</h1>
+        <div class="flex-box">
+            <div th:each="film : ${userList}" class="poster">
+                <img th:src="@{/images/{image}(image=${film.film.image})}" th:alt="${film.film.name}"/>
+                <div class="black-overlap">
+                    <span th:text="${film.film.name}"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="film__collection">
         <h1>Top 5</h1>
         <div class="flex-box">
             <div class="ranking" th:each="film, index : ${bestFilms}">

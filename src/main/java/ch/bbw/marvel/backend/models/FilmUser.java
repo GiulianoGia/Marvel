@@ -24,9 +24,7 @@ public class FilmUser {
         return film.getFilmID();
     }
 
-    public int getUserID() {
-        return user.getId();
-    }
+    public int getUserID() { return user.getId();}
 
     public void setFilmID(int filmUserID) {
         this.filmUserID = filmUserID;

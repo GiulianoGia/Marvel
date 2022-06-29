@@ -22,9 +22,13 @@ public class FilmUserController {
         return filmUserService.getAllFilmUser();
     }
 
-    @GetMapping("/filmUser/create")
+    @GetMapping("/filmUser/new")
     public FilmUser create(@RequestParam("filmID") int filmID, @RequestParam("userID") int userID) {
-        FilmUser filmUser = new FilmUser(filmID, userID);
-        return filmUserService.createFilmUser(filmUser);
+        return filmUserService.createFilmUser(filmID, userID);
+    }
+
+    @GetMapping("/filmUser/user")
+    public List<FilmUser> getUserFilms(@RequestParam("userID") int userID) {
+        return filmUserService.getUserFilms(userID);
     }
 }

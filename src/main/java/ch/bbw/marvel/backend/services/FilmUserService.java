@@ -17,7 +17,12 @@ public class FilmUserService implements FilmUserServiceInterface {
     }
 
     @Override
-    public FilmUser createFilmUser(FilmUser film) {
-        return filmUserRepository.createFilmUser(film.getFilmID(), film.getUserID());
+    public FilmUser createFilmUser(int filmID, int userID) {
+        return filmUserRepository.createFilmUser(filmID, userID);
+    }
+
+    @Override
+    public List<FilmUser> getUserFilms(int userID) {
+        return filmUserRepository.getUserFilms(userID);
     }
 }

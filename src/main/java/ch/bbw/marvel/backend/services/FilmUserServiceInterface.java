@@ -7,5 +7,7 @@ import java.util.List;
 public interface FilmUserServiceInterface {
     List<FilmUser> getAllFilmUser();
 
-    FilmUser createFilmUser(FilmUser film);
+    FilmUser createFilmUser(int filmID, int userID);
+
+    List<FilmUser> getUserFilms(int userID);
 }

@@ -10,9 +10,12 @@ import java.util.List;
 
 @Repository
 public interface FilmUserRepository extends JpaRepository<FilmUser, Integer> {
-    @Query(value = "select * from filmuser", nativeQuery = true)
+    @Query(value = "select * from film_user", nativeQuery = true)
     public List<FilmUser> getAllFilmUser();
 
-    @Query(value = "insert into filmuser (filmid, userid) VALUES (:id, :userid)", nativeQuery = true)
+    @Query(value = "insert into film_user (filmid, userid) VALUES (:id, :userid)", nativeQuery = true)
     public FilmUser createFilmUser(@Param("id") Integer id, @Param("userid") Integer userid);
+
+    @Query(value = "select * from film_user where userid = :userid", nativeQuery = true)
+    public List<FilmUser> getUserFilms(@Param("userid") Integer userid);
 }

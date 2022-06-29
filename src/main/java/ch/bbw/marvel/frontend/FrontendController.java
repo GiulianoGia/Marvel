@@ -90,9 +90,12 @@ public class FrontendController {
         String result = "redirect:/login";
         if(loginService.hasUser(currentUser)) {
             result = "index.html";
-            System.out.println(filmService.getAllFilms().get(0));
+            // to get the user id
+            String[] splicedUser = currentUser.split("[.]", 0);
+            int userId = Integer.parseInt(splicedUser[0]);
             model.addAttribute("films", filmService.getAllFilms());
             model.addAttribute("bestFilms", filmService.getBestRatingFilms());
+            model.addAttribute("userList", filmService.getUserFilms(userId));
         }
         return result;
     }
