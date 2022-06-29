@@ -20,6 +20,16 @@ public class Actor {
     @NotNull
     private String img;
 
+    public Actor(int age, String firstname, String img, String lastname) {
+        this.age = age;
+        this.firstname = firstname;
+        this.img = "personDefault.png";
+        this.lastname = lastname;
+    }
+
+    public Actor() {
+    }
+
     public int getActorID() {
         return actorID;
     }

@@ -10,4 +10,8 @@ public interface FilmServiceInterface {
     Film createFilm(Film film);
 
     List<Film> getFilmByName(Film film);
+
+    List<Film> getBestRatingFilms();
+
+    void changeRating(int filmID, Double rating);
 }

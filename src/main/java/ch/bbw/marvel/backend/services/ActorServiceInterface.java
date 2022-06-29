@@ -6,4 +6,8 @@ import java.util.List;
 
 public interface ActorServiceInterface {
     List<Actor> getAllActor();
+
+    Actor createActor(Actor actor);
+
+    List<Actor> sortByAge(int age);
 }
