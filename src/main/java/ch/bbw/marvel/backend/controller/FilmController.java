@@ -9,7 +9,10 @@ import org.springframework.web.bind.annotation.*;
 import ch.bbw.marvel.backend.models.Film;
 import ch.bbw.marvel.backend.services.FilmService;
 
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:8081")
@@ -28,14 +31,33 @@ public class FilmController {
         return filmService.getFilmByName(film);
     }
 
-    @PostMapping(value = "/film/new", params = {"cost", "name", "rating"})
-    public Film createFilm(@RequestParam("cost") Integer cost, @RequestParam("name") String name, @RequestParam("rating") Double rating ) {
-        Film film = new Film(cost, name, rating);
-        if (filmService.getFilmByName(film) == null) {
-            return filmService.createFilm(film);
+    @PostMapping(value = "/film/new", params = {"cost", "name", "rating", "image", "description", "video"})
+    public Map<String, Boolean> createFilm(@RequestParam("cost") Integer cost, @RequestParam("name") String name, @RequestParam("rating") Double rating, @RequestParam("image") String image, @RequestParam("description") String description, @RequestParam("video") String video) {
+        Film film = new Film(cost, name, rating, image, description, video);
+        if (filmService.getFilmByName(film).isEmpty()) {
+            filmService.createFilm(film);
+            return Collections.singletonMap("worked", true);
         }
         else {
-            return null;
+            return Collections.singletonMap("worked", false);
         }
+
+    }
+
+    // change rating of a film by id
+    @PostMapping(value = "/film/changeRating", params = {"id", "rating"})
+    public Map<String, Boolean> changeRating(@RequestParam("id") Integer id, @RequestParam("rating") Double rating) {
+        try {
+            filmService.changeRating(id, rating);
+            return Collections.singletonMap("worked", true);
+        }
+        catch (Exception e) {
+            return Collections.singletonMap("worked", false);
+        }
+    }
+
+    @GetMapping(value = "/films/best")
+    public List<Film> getBestRatingFilms() {
+        return filmService.getBestRatingFilms();
     }
 }

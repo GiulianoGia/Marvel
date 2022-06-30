@@ -23,4 +23,10 @@ public class ActorController {
         Actor newActor = new Actor(age, firstname, img, lastname);
         return actorService.createActor(newActor);
     }
+
+    // sort actors by age
+    @GetMapping(value = "/actors/sort", params = {"age"})
+    public List<Actor> sortByAge(@RequestParam("age") int age) {
+        return actorService.sortByAge(age);
+    }
 }
