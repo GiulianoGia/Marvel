@@ -20,4 +20,8 @@ public class FilmActorService implements FilmActorServiceInterface {
         return filmActorRepository.createFilmActor(filmID, actorID);
     }
 
+    public List<FilmActor> getFilmActorsByFilmID(Integer filmID) {
+        return filmActorRepository.getFilmActorsByFilmID(filmID);
+    }
+
 }
