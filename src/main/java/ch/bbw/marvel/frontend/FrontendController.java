@@ -95,6 +95,7 @@ public class FrontendController {
             int userId = Integer.parseInt(splicedUser[0]);
             model.addAttribute("films", filmService.getAllFilms());
             model.addAttribute("bestFilms", filmService.getBestRatingFilms());
+            model.addAttribute("expensiveFilms", filmService.mostExpensiveFilms());
             model.addAttribute("userList", filmService.getUserFilms(userId));
         }
         return result;

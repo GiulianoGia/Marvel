@@ -169,6 +169,43 @@ td {
     flex-wrap: wrap;
     align-items: center;
 }
+.grid_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 1px;
+}
+.expensive {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+.poster__expand {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    object-fit: cover;
+    background-image: url("/images/placeholder_film.png");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 150px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.poster__expand img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.poster__expand span {
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+}
 .ranking__container {
     display: flex;
     justify-content: space-around;
@@ -217,7 +254,6 @@ td {
     background-color: rgba(0, 0, 0, .50);
     width: 100%;
     height: 100%;
-
 }
 
 .poster span {

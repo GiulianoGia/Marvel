@@ -25,6 +25,11 @@ public class FilmService implements FilmServiceInterface{
     }
 
     @Override
+    public List<Film> getFilmsMostExpensive() {
+        return filmRepository.getFilmsMostExpensive();
+    }
+
+    @Override
     public List<Film> getFilmByName(Film film) {
         return filmRepository.getFilmByName(film.getName());
     }

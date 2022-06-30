@@ -35,6 +35,12 @@ public class FrontendFilmService {
         return films.get(0);
     }
 
+    public List<Film> mostExpensiveFilms() {
+        ResponseEntity<List<Film>> response = restTemplate.exchange(Config.API_HOST + "/films/expensive", HttpMethod.GET,
+                null, new ParameterizedTypeReference<List<Film>>() {});
+        return response.getBody();
+    }
+
     public List<Film> getBestRatingFilms() {
         ResponseEntity<List<Film>> response = restTemplate.exchange(Config.API_HOST + "/films/best", HttpMethod.GET,
                 null, new ParameterizedTypeReference<List<Film>>() {});
