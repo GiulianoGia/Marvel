@@ -226,8 +226,8 @@ td {
 .poster {
     display: inline-block;
     position: relative;
-    width: 150px;
-    height: 200px;
+    width: 200px;
+    height: 300px;
     background-image: url("/images/placeholder_film.png");
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -243,8 +243,8 @@ td {
 }
 
 .poster img {
-    width: 150px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
 }
 
 .black-overlap {
