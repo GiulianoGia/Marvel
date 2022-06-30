@@ -29,7 +29,7 @@ public class FrontendActorService {
     }
 
     public List<Actor> getActorsToFilm(Film film){
-        ResponseEntity<List<Actor>> response = restTemplate.exchange(Config.API_HOST + "/filmActor/filmID",
+        ResponseEntity<List<Actor>> response = restTemplate.exchange(Config.API_HOST + "/filmActors/filmID?filmID=" + film.getFilmID(),
                 HttpMethod.GET, null, new ParameterizedTypeReference<List<Actor>>() {});
         return response.getBody();
     }
