@@ -7,13 +7,18 @@ public class Film {
     private int cost;
     private double rating;
     private String image;
+    private String video;
+    private String description;
 
-    public Film(Integer cost, String name, Double rating) {
+    public Film(Integer cost, String name, Double rating, String video, String description) {
         this.filmID = 0;
         this.cost = cost;
         this.name = name;
         this.rating = rating;
         this.image = "placeholder_film.png";
+        this.video = video;
+        this.description = description;
+
     }
 
     public Film() {}
@@ -60,5 +65,21 @@ public class Film {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getVideo() {
+        return video;
+    }
+
+    public void setVideo(String video) {
+        this.video = video;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
