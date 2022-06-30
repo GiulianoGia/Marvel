@@ -20,6 +20,8 @@ public class FilmActor {
     public FilmActor(int filmID, int actorID) {
     }
 
+    public FilmActor() {}
+
     public Actor getActor() {
         return actor;
     }

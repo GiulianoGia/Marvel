@@ -2,15 +2,10 @@ package ch.bbw.marvel.backend.controller;
 
 import ch.bbw.marvel.backend.models.Film;
 import ch.bbw.marvel.backend.services.FilmService;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import ch.bbw.marvel.backend.models.Film;
-import ch.bbw.marvel.backend.services.FilmService;
 
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -23,6 +18,11 @@ public class FilmController {
     @GetMapping("/films/all")
     public List<Film> getAll() {
         return filmService.getAllFilm();
+    }
+
+    @GetMapping("/films/expensive")
+    public List<Film> getFilmsMostExpensive() {
+        return filmService.getFilmsMostExpensive();
     }
 
     @GetMapping(value = "film/get", params = {"name"})
@@ -44,7 +44,6 @@ public class FilmController {
 
     }
 
-    // change rating of a film by id
     @PostMapping(value = "/film/changeRating", params = {"id", "rating"})
     public Map<String, Boolean> changeRating(@RequestParam("id") Integer id, @RequestParam("rating") Double rating) {
         try {

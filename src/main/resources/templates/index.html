@@ -47,5 +47,15 @@
             </div>
         </div>
     </div>
+    <div class="film__collection">
+        <h1>Most Expensive Films</h1>
+        <div class="grid_box">
+            <div class="expensive" th:each="film, index : ${expensiveFilms}">
+                <div class="poster__expand" style="margin-left: -10px" th:onclick="'window.location =' + '\'' + @{/film?name={name}(name=${film.name})} + '\''">
+                    <img th:src="@{/images/{image}(image=${film.image})}" th:alt="${film.name}"/>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

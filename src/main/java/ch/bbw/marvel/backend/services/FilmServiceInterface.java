@@ -13,5 +13,7 @@ public interface FilmServiceInterface {
 
     List<Film> getBestRatingFilms();
 
+    List<Film> getFilmsMostExpensive();
+
     void changeRating(int filmID, Double rating);
 }
