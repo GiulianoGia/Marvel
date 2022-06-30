@@ -24,7 +24,6 @@ public class FilmActorController {
         return filmActorService.getAllFilmActor();
     }
 
-    // get film actors by film id
     @GetMapping("/filmActors/filmID")
     public List<FilmActor> getFilmActorsByFilmID(@RequestParam("filmID") int filmID) {
         return filmActorService.getFilmActorsByFilmID(filmID);
