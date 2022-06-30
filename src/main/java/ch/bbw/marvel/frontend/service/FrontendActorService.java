@@ -29,8 +29,9 @@ public class FrontendActorService {
     }
 
     public List<Actor> getActorsToFilm(Film film){
-        // TODO write method that gets every actor from that film
-        return null;
+        ResponseEntity<List<Actor>> response = restTemplate.exchange(Config.API_HOST + "/filmActor/filmID",
+                HttpMethod.GET, null, new ParameterizedTypeReference<List<Actor>>() {});
+        return response.getBody();
     }
 
     public Actor getActorByName(String name) {

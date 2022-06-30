@@ -112,8 +112,10 @@ CREATE TABLE `film` (
   `image` varchar(255) DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL,
   `rating` double NOT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `video` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`filmid`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -123,7 +125,9 @@ CREATE TABLE `film` (
 LOCK TABLES `film` WRITE;
 /*!40000 ALTER TABLE `film` DISABLE KEYS */;
 INSERT INTO `film` VALUES
-(1,316000000,'avengers_infinity_war.jpg','Avengers Infinity War',4.8);
+(1,316000000,'avengers_infinity_war.jpg','Avengers Infinity War',4.8,NULL,NULL),
+(2,365000000,'age_of_ultron.jpeg','Avengers Age of Ultrons',5,'tmeOjFno6Do','Das ist ein Film'),
+(3,365000000,'avengers_endgame.jpeg','Avengers Endgame',5,'tmeOjFno6Do','Das ist ein Film');
 /*!40000 ALTER TABLE `film` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -165,6 +169,36 @@ INSERT INTO `film_actor` VALUES
 UNLOCK TABLES;
 
 --
+-- Table structure for table `film_user`
+--
+
+DROP TABLE IF EXISTS `film_user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `film_user` (
+  `film_userid` int(11) NOT NULL AUTO_INCREMENT,
+  `filmid` int(11) NOT NULL,
+  `userid` int(11) NOT NULL,
+  PRIMARY KEY (`film_userid`),
+  KEY `FKm8n5q6r7plxdsitxu0snkikha` (`filmid`),
+  KEY `FKcayq8q8w3yngtw4jo3tt9fxf1` (`userid`),
+  CONSTRAINT `FKcayq8q8w3yngtw4jo3tt9fxf1` FOREIGN KEY (`userid`) REFERENCES `user` (`id`),
+  CONSTRAINT `FKm8n5q6r7plxdsitxu0snkikha` FOREIGN KEY (`filmid`) REFERENCES `film` (`filmid`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `film_user`
+--
+
+LOCK TABLES `film_user` WRITE;
+/*!40000 ALTER TABLE `film_user` DISABLE KEYS */;
+INSERT INTO `film_user` VALUES
+(1,1,61403711);
+/*!40000 ALTER TABLE `film_user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `user`
 --
 
@@ -190,7 +224,7 @@ CREATE TABLE `user` (
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 INSERT INTO `user` VALUES
-(61403711,19,'anthony.pena@lernende.bbw.ch','Anthony Javier','2022-06-29 19:06:52','Peña Vargas','1234');
+(61403711,19,'anthony.pena@lernende.bbw.ch','Anthony Javier','2022-06-30 08:53:09','Peña Vargas','1234');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -203,4 +237,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-30  6:32:47
+-- Dump completed on 2022-06-30 10:13:59
