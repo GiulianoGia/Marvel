@@ -13,4 +13,7 @@ public interface FilmActorRepository extends JpaRepository<FilmActor, Integer> {
 
     @Query(value = "insert into film_actor (actor_actor_id, film_film_id) Values (:actorid, :filmid)", nativeQuery = true)
     FilmActor createFilmActor(@Param("filmid") Integer filmid, @Param("actorid") Integer actorid);
+
+    @Query(value="select * from film_actor where film_film_id = :filmid", nativeQuery = true)
+    List<FilmActor> getFilmActorsByFilmID(@Param("filmid") Integer filmid);
 }
