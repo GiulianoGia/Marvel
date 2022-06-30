@@ -90,7 +90,6 @@ public class FrontendController {
         String result = "redirect:/login";
         if(loginService.hasUser(currentUser)) {
             result = "index.html";
-            System.out.println(filmService.getAllFilms().get(0));
             model.addAttribute("films", filmService.getAllFilms());
         }
         return result;

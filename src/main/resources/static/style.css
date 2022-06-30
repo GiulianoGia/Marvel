@@ -211,3 +211,23 @@ td {
     background-color: #f0f0f0;
     cursor: pointer;
 }
+
+/* -- BUTTONS --------------------------------------------------------------------------------------------------------*/
+.round-button {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background-color: #333030;
+    color: #f0f0f0;
+    text-align: center;
+    font-size: 90px;
+}
+
+.round-button:hover {
+    width: 110px;
+    height: 110px;
+    font-size: 100px;
+    cursor: pointer;
+    margin-top: -1000px;
+}

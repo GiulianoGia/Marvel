@@ -39,63 +39,63 @@ CREATE TABLE `actor` (
 LOCK TABLES `actor` WRITE;
 /*!40000 ALTER TABLE `actor` DISABLE KEYS */;
 INSERT INTO `actor` VALUES
-(1,32,'Robert','shaunette_renee_wilson.jpeg','Downey Jr.'),
-(2,32,'Chris','shaunette_renee_wilson.jpeg','Hemsworth'),
-(3,32,'Chris','shaunette_renee_wilson.jpeg','Evans'),
-(4,32,'Scarlett','shaunette_renee_wilson.jpeg','Johansson'),
-(5,32,'Edward','shaunette_renee_wilson.jpeg','Norton'),
-(6,32,'Elizabeth','shaunette_renee_wilson.jpeg','Olsen'),
-(7,32,'Jeremy','shaunette_renee_wilson.jpeg','Renner'),
-(8,32,'Mark','shaunette_renee_wilson.jpeg','Raffalo'),
-(9,32,'Aaron','shaunette_renee_wilson.jpeg','Taylor-Johnson'),
-(10,32,'Samuel L.','shaunette_renee_wilson.jpeg','Jackson'),
-(11,32,'Clark','shaunette_renee_wilson.jpeg','Gregg'),
-(12,32,'Cobie','shaunette_renee_wilson.jpeg','Smulders'),
-(13,32,'Hayley','shaunette_renee_wilson.jpeg','Atwell'),
-(14,32,'Don','shaunette_renee_wilson.jpeg','Cheadle'),
-(15,32,'Dominic','shaunette_renee_wilson.jpeg','Cooper'),
-(16,32,'Idris','shaunette_renee_wilson.jpeg','Elba'),
-(17,32,'Anthony','shaunette_renee_wilson.jpeg','Hopkins'),
-(18,32,'Terrence','shaunette_renee_wilson.jpeg','Howard'),
-(19,32,'Anthony','shaunette_renee_wilson.jpeg','Mackie'),
-(20,32,'Gwyneth','shaunette_renee_wilson.jpeg','Paltrow'),
-(21,32,'Natalie','shaunette_renee_wilson.jpeg','Portman'),
-(22,32,'Rene','shaunette_renee_wilson.jpeg','Russo'),
-(23,32,'Stellan','shaunette_renee_wilson.jpeg','Skarsgård'),
-(24,32,'John','shaunette_renee_wilson.jpeg','Slattery'),
-(25,32,'Sebastian','shaunette_renee_wilson.jpeg','Stan'),
-(26,32,'Tom','shaunette_renee_wilson.jpeg','Hiddleston'),
-(27,32,'James','shaunette_renee_wilson.jpeg','Spader'),
-(28,32,'Dave','shaunette_renee_wilson.jpeg','Bautista'),
-(29,32,'Bradley','shaunette_renee_wilson.jpeg','Cooper'),
-(30,32,'Vin','shaunette_renee_wilson.jpeg','Diesel'),
-(31,32,'Chris','shaunette_renee_wilson.jpeg','Pratt'),
-(32,32,'Zoe','shaunette_renee_wilson.jpeg','Saldana'),
-(33,32,'Paul','shaunette_renee_wilson.jpeg','Rudd'),
-(34,32,'Michael','shaunette_renee_wilson.jpeg','Douglas'),
-(35,32,'Judy','shaunette_renee_wilson.jpeg','Greer'),
-(36,32,'Evangeline','shaunette_renee_wilson.jpeg','Lilly'),
-(37,32,'Michael','shaunette_renee_wilson.jpeg','Peña'),
-(38,32,'Corey','shaunette_renee_wilson.jpeg','Stoll'),
-(39,32,'Bobby','shaunette_renee_wilson.jpeg','Cannavale'),
-(40,32,'Chadwick','shaunette_renee_wilson.jpeg','Boseman'),
-(41,32,'Michael B.','shaunette_renee_wilson.jpeg','Jordan'),
-(42,32,'Letitia','shaunette_renee_wilson.jpeg','Wright'),
-(43,32,'Danai','shaunette_renee_wilson.jpeg','Gurira'),
-(44,32,'Daniel','shaunette_renee_wilson.jpeg','Kaluuya'),
-(45,32,'Winston','shaunette_renee_wilson.jpeg','Duke'),
-(46,32,'Martin','shaunette_renee_wilson.jpeg','Freeman'),
-(47,32,'Angela','shaunette_renee_wilson.jpeg','Bassett'),
-(48,32,'Stan','shaunette_renee_wilson.jpeg','Lee'),
-(49,32,'Sterling K.','shaunette_renee_wilson.jpeg','Brown'),
-(50,32,'Lupita','shaunette_renee_wilson.jpeg','Nyong\'o'),
-(51,32,'Forest','shaunette_renee_wilson.jpeg','Whitaker'),
+(1,57,'Robert','robert_downey_jr.jpeg','Downey Jr.'),
+(2,38,'Chris','chris_hemsworth.jpeg','Hemsworth'),
+(3,41,'Chris','chris_evans.jpeg','Evans'),
+(4,37,'Scarlett','scarlett_johansson.jpeg','Johansson'),
+(5,52,'Edward','edward_norton.jpeg','Norton'),
+(6,33,'Elizabeth','elizabeth_olsen.jpeg','Olsen'),
+(7,51,'Jeremy','jeremy_renner.jpeg','Renner'),
+(8,54,'Mark','mark_ruffalo.jpeg','Ruffalo'),
+(9,32,'Aaron','aaron_taylor-johnson.jpeg','Taylor-Johnson'),
+(10,73,'Samuel L.','samuel_l_jackson.jpeg','Jackson'),
+(11,60,'Clark','clark_gregg.jpeg','Gregg'),
+(12,40,'Cobie','cobie_smulders.jpeg','Smulders'),
+(13,40,'Hayley','hayley_atwell.jpeg','Atwell'),
+(14,57,'Don','don_cheadle.jpeg','Cheadle'),
+(15,44,'Dominic','dominic_cooper.jpeg','Cooper'),
+(16,49,'Idris','idris_elba.jpeg','Elba'),
+(17,84,'Anthony','anthony_hopkins.jpeg','Hopkins'),
+(18,53,'Terrence','terrence_howard.jpeg','Howard'),
+(19,43,'Anthony','anthony_mackie.jpeg','Mackie'),
+(20,49,'Gwyneth','gwyneth_paltrow.jpeg','Paltrow'),
+(21,41,'Natalie','natalie_portman.jpeg','Portman'),
+(22,68,'Rene','rene_russo.jpeg','Russo'),
+(23,71,'Stellan','stellan_skarsgard.jpeg','Skarsgård'),
+(24,59,'John','john_slattery.jpeg','Slattery'),
+(25,39,'Sebastian','sebastian_stan.jpeg','Stan'),
+(26,41,'Tom','tom_hiddleston.jpeg','Hiddleston'),
+(27,62,'James','james_spader.jpeg','Spader'),
+(28,53,'Dave','dave_bautista.jpeg','Bautista'),
+(29,47,'Bradley','bradley_cooper.jpeg','Cooper'),
+(30,54,'Vin','vin_diesel.jpeg','Diesel'),
+(31,43,'Chris','chris_pratt.jpeg','Pratt'),
+(32,44,'Zoe','zoe_saldana.jpeg','Saldana'),
+(33,53,'Paul','paul_rudd.jpeg','Rudd'),
+(34,77,'Michael','michael_douglas.jpeg','Douglas'),
+(35,46,'Judy','judy_greer.jpeg','Greer'),
+(36,42,'Evangeline','evangeline_lilly.jpeg','Lilly'),
+(37,46,'Michael','michael_pena.jpeg','Peña'),
+(38,46,'Corey','corey_stoll.jpeg','Stoll'),
+(39,52,'Bobby','bobby_cannavale.jpeg','Cannavale'),
+(40,43,'Chadwick','chadwick_boseman.jpeg','Boseman'),
+(41,35,'Michael B.','michael_b_jordan.jpeg','Jordan'),
+(42,28,'Letitia','letitia_wright.jpeg','Wright'),
+(43,44,'Danai','danai_gurira.jpeg','Gurira'),
+(44,33,'Daniel','daniel_kaluuya.jpeg','Kaluuya'),
+(45,35,'Winston','winston_duke.jpeg','Duke'),
+(46,50,'Martin','martin_freeman.jpeg','Freeman'),
+(47,63,'Angela','angela_bassett.jpeg','Bassett'),
+(48,95,'Stan','stan_lee.jpeg','Lee'),
+(49,46,'Sterling K.','sterling_k_brown.jpeg','Brown'),
+(50,39,'Lupita','lupita_nyong\'o.jpeg','Nyong\'o'),
+(51,60,'Forest','forest_whitaker.jpeg','Whitaker'),
 (52,32,'Shaunette Renée','shaunette_renee_wilson.jpeg','Wilson'),
-(53,32,'Denzel','shaunette_renee_wilson.jpeg','Whitaker'),
-(54,32,'John','shaunette_renee_wilson.jpeg','Kani'),
-(55,32,'Alex R.','shaunette_renee_wilson.jpeg','Hibbert'),
-(56,32,'Florence','shaunette_renee_wilson.jpeg','Kasumba'),
-(57,32,'Atandwa','shaunette_renee_wilson.jpeg','Kani');
+(53,32,'Denzel','denzel_whitaker.jpeg','Whitaker'),
+(54,78,'John','john_kani.jpeg','Kani'),
+(55,17,'Alex R.','alex_r_hibbert.jpeg','Hibbert'),
+(56,45,'Florence','florence_kasumba.jpeg','Kasumba'),
+(57,38,'Atandwa','atandwa_kani.jpeg','Kani');
 /*!40000 ALTER TABLE `actor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -109,11 +109,11 @@ DROP TABLE IF EXISTS `film`;
 CREATE TABLE `film` (
   `filmid` int(11) NOT NULL AUTO_INCREMENT,
   `cost` int(11) NOT NULL,
-  `image` varchar(255) CHARACTER SET utf8mb4 DEFAULT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
   `rating` double NOT NULL,
   PRIMARY KEY (`filmid`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -123,8 +123,7 @@ CREATE TABLE `film` (
 LOCK TABLES `film` WRITE;
 /*!40000 ALTER TABLE `film` DISABLE KEYS */;
 INSERT INTO `film` VALUES
-(2,316000000,'avengers_infinity_war.jpg','Avengers Infinity War',4.8),
-(3,10000,'avengers_endgame.jpg','Avengers Endgame',4.8);
+(1,316000000,'avengers_infinity_war.jpg','Avengers Infinity War',4.8);
 /*!40000 ALTER TABLE `film` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -144,7 +143,7 @@ CREATE TABLE `film_actor` (
   KEY `FKma5hf8eiaqb71bueolgfkyur9` (`film_film_id`),
   CONSTRAINT `FKf21hkfoa89iyar1calmoe7d7j` FOREIGN KEY (`actor_actor_id`) REFERENCES `actor` (`actorid`),
   CONSTRAINT `FKma5hf8eiaqb71bueolgfkyur9` FOREIGN KEY (`film_film_id`) REFERENCES `film` (`filmid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -153,6 +152,15 @@ CREATE TABLE `film_actor` (
 
 LOCK TABLES `film_actor` WRITE;
 /*!40000 ALTER TABLE `film_actor` DISABLE KEYS */;
+INSERT INTO `film_actor` VALUES
+(1,2,1),
+(2,3,1),
+(3,4,1),
+(4,6,1),
+(5,7,1),
+(6,8,1),
+(7,14,1),
+(8,19,1);
 /*!40000 ALTER TABLE `film_actor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -182,7 +190,7 @@ CREATE TABLE `user` (
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 INSERT INTO `user` VALUES
-(61403711,19,'anthony.pena@lernende.bbw.ch','Anthony Javier','2022-06-27 17:56:14','Peña Vargas','1234');
+(61403711,19,'anthony.pena@lernende.bbw.ch','Anthony Javier','2022-06-29 19:06:52','Peña Vargas','1234');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -195,4 +203,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-28 15:43:26
+-- Dump completed on 2022-06-30  6:28:27

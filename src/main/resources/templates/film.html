@@ -12,13 +12,15 @@
         <iframe width="790" height="400" src="https://www.youtube.com/embed/6ZfuNTqbHE8?modestbranding=1&autohide=1&showinfo=0&controls=0?autoplay=1" title="Marvel Studios Avengers: Infinity War Official Trailer" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
         <div>
             <h2>Actors</h2>
-            <div class="poster" th:each="actor : ${actors}">
+            <div class="round-button"><</div>
+            <div class="poster" th:each="actor : ${actors.subList(0, 6)}">
                 <img th:src="@{/images/{picture}(picture=${actor.img})}"/>
                 <div class="black-overlap">
                     <span th:text="${actor.firstname} + ' ' + ${actor.lastname}"></span>
                 </div>
 
             </div>
+            <div class="round-button">></div>
             <h2>Details</h2>
             <table>
                 <tbody>
