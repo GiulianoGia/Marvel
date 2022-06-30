@@ -20,6 +20,11 @@ public class FilmController {
         return filmService.getAllFilm();
     }
 
+    @GetMapping("/films/expensive")
+    public List<Film> getFilmsMostExpensive() {
+        return filmService.getFilmsMostExpensive();
+    }
+
     @GetMapping(value = "film/get", params = {"name"})
     public List<Film> getFilmBy(@RequestParam("name") String name) {
         Film film = new Film(name);
