@@ -24,6 +24,12 @@ public class FilmActorController {
         return filmActorService.getAllFilmActor();
     }
 
+    // get film actors by film id
+    @GetMapping("/filmActors/filmID")
+    public List<FilmActor> getFilmActorsByFilmID(@RequestParam("filmID") int filmID) {
+        return filmActorService.getFilmActorsByFilmID(filmID);
+    }
+
     @PostMapping(value="/filmActor/create", params = {"filmID", "actorID"})
     public FilmActor createFilmActor(@RequestParam("filmID") int filmID, @RequestParam("actorID") int actorID) {
         logger.info("filmID: " + filmID + " actorID: " + actorID);
