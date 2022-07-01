@@ -29,7 +29,7 @@ public class FrontendFilmService {
     }
 
     public Film getFilm(String name) {
-        ResponseEntity<List<Film>> response = restTemplate.exchange(Config.API_HOST + "/films/all", HttpMethod.GET,
+        ResponseEntity<List<Film>> response = restTemplate.exchange(Config.API_HOST + "/film/get?name=" + name, HttpMethod.GET,
                 null, new ParameterizedTypeReference<List<Film>>() {});
         List<Film> films = response.getBody();
         return films.get(0);

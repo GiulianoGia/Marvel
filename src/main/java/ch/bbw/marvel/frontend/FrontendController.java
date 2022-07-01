@@ -1,5 +1,6 @@
 package ch.bbw.marvel.frontend;
 
+import ch.bbw.marvel.frontend.models.Film;
 import ch.bbw.marvel.frontend.models.User;
 import ch.bbw.marvel.frontend.service.FrontendActorService;
 import ch.bbw.marvel.frontend.service.FrontendFilmService;
@@ -107,8 +108,9 @@ public class FrontendController {
         String result = "redirect:/login";
         if(loginService.hasUser(currentUser)) {
             result = "film";
-            model.addAttribute("film", filmService.getFilm(name));
-            model.addAttribute("actors", actorService.getAllActors());
+            Film film = filmService.getFilm(name);
+            model.addAttribute("film", film);
+            model.addAttribute("actors", actorService.getActorsToFilm(film));
         }
 
         return result;

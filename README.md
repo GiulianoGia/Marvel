@@ -70,12 +70,16 @@ In der Loginpage habe ich ein Link zu der Registerpage gemacht. Dieses musste ic
 Wenn man auf die logout Route geht, dann wird man ausgeloggt. Das passiert indem das Cookie gelöscht wird. Wenn man ausgeloggt ist, kommt man auf die index Seite.
 
 #### Indexpage
-Auf der Indexseite werden alle Filme angezeigt. Hier sieht man immer das Poster. Dieses hat ein dünklereres Layout und einen Titel drauf. Wenn ich drüber hovere, dann wir ein roter Rand angezeigt. Wenn ich draufklicke, komme ich auf die Filmansicht. Auf die Indexseite komme ich nur wenn ich eingeloggt bin. Um alle Filme anzuzeigen, habe ich ein Request im Backend gemacht. Hier habe ich eine Liste mit Filmen bekommen. Die Filminformationen, wurden in eine Modelklasse gespeichert. Also habe ich eine Liste mit dieser Modell Klasse bekommen. Diese Modell Klasse habe ich im Frontend erstellt. Um sagen zu können, dass die response zu einem Objekt von dieser Klasse gespeichert werden sollte. Ich konnte diese dann im Controller aufrufen und dem Template übergeben. Ich konnte dann mithilfe eines each loops alle Flme anzeigen lassen.
+Auf der Indexseite werden alle Filme angezeigt. Hier sieht man immer das Poster. Dieses hat ein dünklereres Layout und einen Titel drauf. Wenn ich drüber hovere, dann wir ein roter Rand angezeigt. Wenn ich draufklicke, komme ich auf die Filmansicht. Auf die Indexseite komme ich nur wenn ich eingeloggt bin. Um alle Filme anzuzeigen, habe ich ein Request im Backend gemacht. Hier habe ich eine Liste mit Filmen bekommen. Die Filminformationen, wurden in eine Modelklasse gespeichert. Also habe ich eine Liste mit dieser Modell Klasse bekommen. Diese Modell Klasse habe ich im Frontend erstellt. Um sagen zu können, dass die response zu einem Objekt von dieser Klasse gespeichert werden sollte. Ich konnte diese dann im Controller aufrufen und dem Template übergeben. Ich konnte dann mithilfe eines each loops alle Flme anzeigen lassen. Es hat aber nicht immer einwandfrei funktioniert, da ich am Anfang versucht habe, es mit der getForObject Methode vom RestTemplate bekomme. Das Problem war, dass ich eine Liste mit Objekten zurück kommt und es als Modell Klasse um die Objekte zu erstellen die Modell Klassen vom Backend verwendet hat. Das konnte ich aber lösen, indem ich die exchange Methode verwendet habe, die auch im RestTemplate Objekt beeinhaltet ist. Diese gibt mir eine ResponseEntity zurück. Hier konnte ich in den Spitzenklammern eine Klasse angeben. Ich habe List und in den Sptizenklammer der List Film angegeben. Ich konnte dann den body des Response in der Methode zurückgeben.
 
 #### Detailansicht Film
 Wenn ich auf einen Film draufdrücke, dann komme ich auf die Detailübersicht. Hier werden Informationen zum Film angezeigt. Hier findet man zu oberst einen Trailer. Danach findet man alle Schauspieler, die in diesem Film mitspielen. Danach findet man eine neue weitere Informationen, so wie die Kosten des Films und welches Rating dieser Film hat. Ich habe diese Ansicht ebenfalls mit Thymeleafs gemacht. Hier habe ich für den einzelnen Film eine Service Methode gemacht, die ein Request zu get Film sendet. Für die Actors habe ich einfach alle Actors genommen, da im Backend noch nichts existiert hat, mit dem ich alle Schauspieler zu einem bestimmten Film holen kann. Der Trailer ist Hardgecoded, da in der Datenbank auch nichts existiert, wo der Link zum Video gespeichert wird. Die Informationen, konnte ich einfach aus dem Film Objekt holen. Diese Seite ist auch nur aufrufbar, wenn man eingeloggt ist.
+##### updated (30/06/2022)
+Giuliano hat jetzt einen Endpoint gemacht, mit dem man zu einem Film eine Liste von Schauspielern bekommt geschrieben. Ich konnte also im Service eine neue Methode machen, diese sendet ein Request, mit der ich eine Liste zurückbekomme. Mit der Liste bin ich gleich umgegangen, wie die Liste mit der ich alle Filme geholt habe. Ich habe den Body ausgeben lassen. Dann habe ich im Controller noch das getAllActors zu getActorsToFilm geändert. Das hat aber nicht mehr funktioniert. Die Attribute wurden nicht mehr richtig aufgefüllt, sondern es wurde mit null ausgefüllt. Es wurde aber die richtige Anzahl von divs erstellt.
 
 #### Detailansicht Actor
+
+#### Suchfunktion
 
 
 ## Kontrollieren
@@ -123,7 +127,6 @@ Wir waren uns einig, dass Anthony das Frontend macht und ich weiter am Backend s
 #### Auf was bin ich stolz (oder eben nicht)
 Ich war darauf stolz, dass mein Backend sehr gut mit seinem Frontend funktioniert hat. Wir konnnten erfolgreich alles miteinander verbinden. 
 
-## 16/06/2022
 > Anthony Peña Vargas
 #### Wo wurde nicht auf meine Meinung eingegangen
 Eigentlich gab es nichts wo nicht auf meine Meinung gehört wurde.
@@ -148,7 +151,6 @@ Wir waren uns einig, dass wir die Request nicht auf in einem Javascript-File mac
 #### Auf was bin ich stolz (oder eben nicht)
 Ich bin stolz, dass ich das Problem mit auto_increment lösen konnte. Das hat die Post-Request einfacher gemacht, da wir nicht direkt in der Datenbank die Auto_increments einstellen mussten. Nach einem Drop-create wären diese Einstellungen wieder weg. 
 
-## 23/06/2022
 > Anthony Peña Vargas
 #### Wo wurde nicht auf meine Meinung eingegangen
 
@@ -158,3 +160,26 @@ Ich konnte mich durchsetzen, dass ich mein Frontend ohne Vue.js mache und ich an
 Wir waren uns einig, dass wir die Requests nicht über Javascript machen, sondern dass wir es im Controller mit Spring boot machen. Dabei können wir verhindern, dass jemand das Login vermeidet, indem er Javascript ausstellt oder den Code verändert.
 #### Auf was bin ich stolz (oder eben nicht)
 Ich war stolz, dass ich es geschafft habe ein Loginsystem zu programmieren und das es sehr gut funktioniert hat. Ich war nicht so stolz, dass beim mergen meine Änderungen verloren gegangen sind und ich sie nicht mehr rückgängig machen konnte.
+
+## 30/06/2022
+> Giuliano Gianola
+#### Wo wurde nicht auf meine Meinung eingegangen?
+
+#### Wobei konnte ich mich durchsetzen?
+
+#### In welchen Punkten war sich die Gruppe einig
+
+#### Auf was bin ich stolz (oder eben nicht)
+
+> Anthony Peña Vargas
+#### Wo wurde nicht auf meine Meinung eingegangen
+
+
+#### Wobei konnte ich mich durchsetzen
+
+#### In welchen Punkten war sich die Gruppe einig
+Heute waren wir uns einig, wie wir die Präsentation aufteilen und wie es weiter mit dem Projekt geht.
+
+
+#### Auf was bin ich stolz (oder eben nicht)
+Ich bin stolz darauf, dass unsere Präsentation so gut gelaufen ist.

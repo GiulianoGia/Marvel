@@ -115,7 +115,7 @@ CREATE TABLE `film` (
   `description` varchar(255) DEFAULT NULL,
   `video` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`filmid`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=311 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -125,9 +125,35 @@ CREATE TABLE `film` (
 LOCK TABLES `film` WRITE;
 /*!40000 ALTER TABLE `film` DISABLE KEYS */;
 INSERT INTO `film` VALUES
-(1,316000000,'avengers_infinity_war.jpg','Avengers Infinity War',4.8,NULL,NULL),
-(2,365000000,'age_of_ultron.jpeg','Avengers Age of Ultrons',5,'tmeOjFno6Do','Das ist ein Film'),
-(3,365000000,'avengers_endgame.jpeg','Avengers Endgame',5,'tmeOjFno6Do','Das ist ein Film');
+(1,140000000,'iron_man_1.jpeg','Iron man 1',4.7,NULL,'x3LbqNE8Opw'),
+(2,150000000,'the_incredible_hulk.jpeg','The Incredible Hulk',4.1,NULL,'xbqNb2PFKKA'),
+(3,200000000,'iron_man_2.jpeg','Iron man 2',3,NULL,'RcT6WhvqhOQ'),
+(4,150000000,'thor.jpeg','Thor',3.5,NULL,'JOddp-nlNvQ'),
+(5,140000000,'captain_america_1.jpeg','Captain America: The First Avenger',4.5,NULL,'JerVrbLldXw'),
+(6,220000000,'avengers_1.jpeg','Marvel\'s The Avengers',4.7,NULL,'eOrNdBpGMv8'),
+(7,200000000,'iron_man_3.jpeg','Iron man 3',4,NULL,'I-JXqQR_FKk'),
+(8,150000000,'thor_2.jpeg','Thor: The Dark World',2,NULL,'npvJ9FTgZbM'),
+(9,170000000,'captain_america_2.jpeg','Captain America: The Winter Soldier',4.7,NULL,'7SlILk2WMTI'),
+(10,200000000,'guardians_of_the_galaxy_1.jpeg','Guardians Of the Galaxy',4.6,NULL,'2LIQ2-PZBC8'),
+(11,365000000,'age_of_ultron.jpeg','Avengers Age of Ultrons',5,'','tmeOjFno6Do'),
+(12,130000000,'ant_man.jpeg','Ant-Man',4.5,NULL,'tmeOjFno6Do'),
+(13,250000000,'captain_america_3.jpeg','Captain America: Civil War',4.6,NULL,'dKrVegVI0Us'),
+(14,200000000,'doctor_strange_1.jpeg','Doctor Strange',4.4,NULL,'Lt-U_t2pUHI'),
+(15,200000000,'guardians_of_the_galaxy_2.jpeg','Guardians of the Galaxy Vol. 2',4.6,NULL,'wUn05hdkhjM'),
+(16,175000000,'spider-man_1.jpeg','Spider-Man: Homecoming',4.3,NULL,'39udgGPyYMg'),
+(17,180000000,'thor_3.jpeg','Thor: Ragnarok',4,NULL,'ue80QwXMRHg'),
+(18,200000000,'black_panther.jpeg','Black Panther',4.5,NULL,'xjDjIWPwcPU'),
+(19,316000000,'avengers_infinity_war.jpg','Avengers Infinity War',4.8,'','JQRn06QlXDw'),
+(20,130000000,'ant-man_2.jpeg','Ant-Man and the Wasp',4.4,NULL,'UUkn-enk2RU'),
+(21,152000000,'captain_marvel.jpeg','Captain Marvel',3,NULL,'Z1BCujX3pw8'),
+(22,365000000,'avengers_endgame.jpg','Avengers Endgame',5,NULL,'TcMBFSGVi1c'),
+(23,160000000,'spider-man_2.jpeg','Spider-Man: Far From Home',4.4,NULL,'Nt9L1jCKGnE'),
+(24,200000000,'black_widow.jpeg','Black Widow',4.1,NULL,'ybji16u608U'),
+(25,150000000,'shang-chi.jpeg','Shang-Chi and the Legend of the Ten Rings',4.6,NULL,'8YjFbMbfXaQ'),
+(26,200000000,'eternals.jpeg','Eternals',3.3,NULL,'x_me3xsvDgk'),
+(27,200000000,'spider-man_3.jpeg','Spider-Man: No Way Home',4.8,NULL,'rt-2cxAiPJk'),
+(28,200000000,'doctor_strange_2.jpeg','Doctor Strange in the Multiverse of Madness',3.6,NULL,'aWzlQ2N6qqg'),
+(29,200000000,'thor_4.jpeg','Thor: Love And Thunder',5,NULL,'khibF2PFU58');
 /*!40000 ALTER TABLE `film` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -147,7 +173,7 @@ CREATE TABLE `film_actor` (
   KEY `FKma5hf8eiaqb71bueolgfkyur9` (`film_film_id`),
   CONSTRAINT `FKf21hkfoa89iyar1calmoe7d7j` FOREIGN KEY (`actor_actor_id`) REFERENCES `actor` (`actorid`),
   CONSTRAINT `FKma5hf8eiaqb71bueolgfkyur9` FOREIGN KEY (`film_film_id`) REFERENCES `film` (`filmid`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -156,15 +182,6 @@ CREATE TABLE `film_actor` (
 
 LOCK TABLES `film_actor` WRITE;
 /*!40000 ALTER TABLE `film_actor` DISABLE KEYS */;
-INSERT INTO `film_actor` VALUES
-(1,2,1),
-(2,3,1),
-(3,4,1),
-(4,6,1),
-(5,7,1),
-(6,8,1),
-(7,14,1),
-(8,19,1);
 /*!40000 ALTER TABLE `film_actor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -193,8 +210,6 @@ CREATE TABLE `film_user` (
 
 LOCK TABLES `film_user` WRITE;
 /*!40000 ALTER TABLE `film_user` DISABLE KEYS */;
-INSERT INTO `film_user` VALUES
-(1,1,61403711);
 /*!40000 ALTER TABLE `film_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -214,7 +229,7 @@ CREATE TABLE `user` (
   `lastname` varchar(255) CHARACTER SET utf8mb4 DEFAULT NULL,
   `password` varchar(255) CHARACTER SET utf8mb4 DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=61403712 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=360382253 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -224,7 +239,8 @@ CREATE TABLE `user` (
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 INSERT INTO `user` VALUES
-(61403711,19,'anthony.pena@lernende.bbw.ch','Anthony Javier','2022-06-30 08:53:09','Peña Vargas','1234');
+(61403711,19,'anthony.pena@lernende.bbw.ch','Anthony Javier','2022-06-30 16:59:43','Peña Vargas','1234'),
+(360382252,18,'test@test.com','max ','2022-06-30 13:05:10','mustermann','test');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -237,4 +253,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-30 10:16:17
+-- Dump completed on 2022-06-30 19:12:40
