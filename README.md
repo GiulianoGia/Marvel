@@ -183,3 +183,28 @@ Heute waren wir uns einig, wie wir die Präsentation aufteilen und wie es weiter
 
 #### Auf was bin ich stolz (oder eben nicht)
 Ich bin stolz darauf, dass unsere Präsentation so gut gelaufen ist.
+
+## 07/07/2022
+> Giuliano Gianola
+#### Wo wurde nicht auf meine Meinung eingegangen?
+
+#### Wobei konnte ich mich durchsetzen?
+
+#### In welchen Punkten war sich die Gruppe einig
+
+#### Auf was bin ich stolz (oder eben nicht)
+
+> Anthony Peña Vargas
+#### Wo wurde nicht auf meine Meinung eingegangen
+
+
+#### Wobei konnte ich mich durchsetzen
+Ich konnte mich durchsetzen, dass man eine Profile Seite haben, die man in der Navbar daraufzugreifen kann.
+
+#### In welchen Punkten war sich die Gruppe einig
+Wir waren uns einig, dass wir eine Suchfunktion brauchen.
+
+
+#### Auf was bin ich stolz (oder eben nicht)
+Leider hat es mit dem password forgot nicht funktioniert, da es zu komplex geworden wäre.
+
