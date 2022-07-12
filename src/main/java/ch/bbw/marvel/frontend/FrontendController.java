@@ -7,10 +7,12 @@ import ch.bbw.marvel.frontend.service.FrontendFilmService;
 import ch.bbw.marvel.frontend.service.LoginService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
 
 @Controller
 public class FrontendController {
@@ -44,6 +46,10 @@ public class FrontendController {
             result = "redirect:/";
             response.addCookie(cookie);
         }
+        else {
+            user.setId(-1);
+        }
+
 
         return result;
     }
@@ -62,8 +68,12 @@ public class FrontendController {
     }
 
     @PostMapping("/register")
-    public String register(@ModelAttribute User user, HttpServletResponse response) {
-        Cookie cookie = loginService.register(user);
+    public String register(@Valid User user, BindingResult bindingResult, HttpServletResponse response) {
+        Cookie cookie = null;
+        if(!bindingResult.hasErrors()) {
+            cookie = loginService.register(user);
+        }
+
         String result = "register";
         if(cookie != null) {
             result = "redirect:/";
@@ -73,8 +83,13 @@ public class FrontendController {
         return result;
     }
 
+    @GetMapping("/forgetpassword")
+    public String getForgetPassword() {
+        return "forgetPassword";
+    }
+
     // logs out the user and redirect to the login page
-    @GetMapping("logout")
+    @GetMapping("/logout")
     public String logout(HttpServletResponse response) {
         Cookie cookie = new Cookie("currentUser", null);
         response.addCookie(cookie);
@@ -87,7 +102,7 @@ public class FrontendController {
     @GetMapping("/")
     public String index(@CookieValue(name="currentUser", defaultValue="undefined.undefined") String currentUser,
                         Model model) {
-
+        // todo resend cookie
         String result = "redirect:/login";
         if(loginService.hasUser(currentUser)) {
             result = "index.html";
@@ -105,6 +120,9 @@ public class FrontendController {
     @GetMapping("/film")
     public String film(@RequestParam(name="name", required=true) String name,
                        @CookieValue(name="currentUser", defaultValue = "undefined.undefined") String currentUser, Model model) {
+
+
+        // todo resend cookie
         String result = "redirect:/login";
         if(loginService.hasUser(currentUser)) {
             result = "film";
@@ -115,6 +133,21 @@ public class FrontendController {
 
         return result;
     }
+
+    @GetMapping("/profile")
+    public String profile(@CookieValue(name="currentUser") String cookie, Model model) {
+        String result = null;
+        // todo resend cookie
+        if (loginService.hasUser(cookie)) {
+            model.addAttribute("user", loginService.currentUser(cookie));
+            result = "profile";
+        }
+        else {
+            result = "redirect:/login";
+        }
+        return result;
+    }
+
 
 
 }
