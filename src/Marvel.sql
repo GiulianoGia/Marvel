@@ -239,8 +239,9 @@ CREATE TABLE `user` (
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 INSERT INTO `user` VALUES
-(61403711,19,'anthony.pena@lernende.bbw.ch','Anthony Javier','2022-06-30 16:59:43','Peña Vargas','1234'),
-(360382252,18,'test@test.com','max ','2022-06-30 13:05:10','mustermann','test');
+(61403711,19,'anthony.pena@lernende.bbw.ch','Anthony Javier','2022-07-12 16:55:57','Peña Vargas','1234'),
+(88959306,19,'wzet@ewog.ch','2460','2022-07-07 13:09:31','2735','test'),
+(360382252,18,'test@test.com','max ','2022-07-07 14:21:28','mustermann','test');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -253,4 +254,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-30 19:12:40
+-- Dump completed on 2022-07-12 19:40:56
