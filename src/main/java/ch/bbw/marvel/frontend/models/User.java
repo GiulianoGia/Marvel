@@ -1,8 +1,10 @@
 package ch.bbw.marvel.frontend.models;;
 
 // IMPORTS
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotNull;
+import org.hibernate.validator.constraints.Length;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import javax.validation.constraints.*;
 import java.util.Date;
 
 public class User {
@@ -10,8 +12,17 @@ public class User {
 // ---------------------------------------------------------------------------------------------------------------------
 // ATTRIBUTES
     private int id;
+
+    @NotNull
+    @Size(min=3, max=30)
     private String firstname;
+
+    @NotNull
+    @Size(min=3, max=30)
     private String lastname;
+
+    @NotNull
+    @Min(value=18)
     private int age;
 
     @NotNull
@@ -20,7 +31,12 @@ public class User {
 
     @NotNull
     private String password;
+
+    @NotNull
     private String confirmPassword;
+
+    @NotNull
+    @DateTimeFormat
     private Date lastLoggedIn;
 
 // ---------------------------------------------------------------------------------------------------------------------
