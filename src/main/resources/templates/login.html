@@ -11,14 +11,17 @@
 <body class="login-page">
     <h1 class="form-title">Marvel<a>+</a></h1>
     <form class="form-container" action="#" th:action="@{/login}" method="post" onfo>
+        <div th:if="${user.id} == -1">Username or Password incorrect</div>
         <div class="input-container">
           <div>Email</div>
           <input type="email" th:field="${user.email}"/>
+            <div class="error" th:errors="${user.email}"></div>
         </div>
 
         <div class="input-container">
           <div>Password</div>
           <input type="password" th:field="${user.password}"/>
+            <div class="error" th:errors="${user.password}"></div>
         </div>
 
         <p><a href="/forgetpassword">Forget Password</a><a href="/register" style="float: right;">create account</a></p>
