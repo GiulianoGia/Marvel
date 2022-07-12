@@ -14,29 +14,35 @@
     <div class="input-container">
         <div>Firstname</div>
         <input type="text" th:field="${user.firstname}"/>
+        <div class="error" th:errors="${user.firstname}"></div>
     </div>
 
     <div class="input-container">
         <div>Lastname</div>
         <input type="text" th:field="${user.lastname}"/>
+        <div class="error" th:errors="${user.lastname}"></div>
     </div>
 
     <div class="input-container">
         <div>Email</div>
         <input type="email" th:field="${user.email}"/>
+        <div class="error" th:errors="${user.email}"></div>
     </div>
 
     <div class="input-container">
         <div>age</div>
         <input type="number" th:field="${user.age}"/>
+        <div class="error" th:errors="${user.age}"></div>
     </div>
     <div>
         <div>Password</div>
         <input type="password" th:field="${user.password}"/>
+        <div class="error" th:errors="${user.password}"></div>
     </div>
     <div>
         <div>Confirm Password</div>
         <input type="password" th:field="${user.confirmPassword}"/>
+        <div class="error" th:errors="${user.confirmPassword}"></div>
     </div>
     <button type="submit" id="login_button" class="button-red" disabled>Create Account</button>
 </form>
