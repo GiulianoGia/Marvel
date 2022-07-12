@@ -18,3 +18,13 @@ $(document).ready(function() {
 function disable_input() {
     $("form").children().attr("disabled", true);
 }
+
+// ---------------------------------------------------------------------------------------------------------------------
+// SEARCH
+function proposals(searchField) {
+    $.get("/search?q=" + $(searchField).val(), function(response) {
+        $(searchField).autocomplete({
+            appendTo: response
+        })
+    })
+}
