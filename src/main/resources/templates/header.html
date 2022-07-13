@@ -1,12 +1,6 @@
 <div class="header" th:fragment="header">
-    <a href="/">homepage</a>
-    <div>
-        <span class="profile" onclick="$(this).parent().find('ul').toggle()">profile</span>
-        <ul hidden>
-            <li>Profile</li>
-            <li>Favorites</li>
-            <li>Logout</li>
-        </ul>
-
-    </div>
+    <a id="home" href="/"><img src="/images/pfeil.svg"/></a>
+    <form id="search-form" th:action="@{/search}" method="get">
+        <input type="search" name="q" placeholder="Search..."/>
+    </form>
 </div>
