@@ -55,8 +55,36 @@ public class FilmController {
         }
     }
 
+    @PostMapping(value="film/changeVideo", params = {"id", "video"})
+    public Map<String, Boolean> changeVideo(@RequestParam("id") Integer id, @RequestParam("video") String video) {
+        try {
+            filmService.changeVideo(id, video);
+            return Collections.singletonMap("worked", true);
+        }
+        catch (Exception e) {
+            return Collections.singletonMap("worked", false);
+        }
+    }
+
     @GetMapping(value = "/films/best")
     public List<Film> getBestRatingFilms() {
         return filmService.getBestRatingFilms();
     }
+
+    @GetMapping(value="/films/worst")
+    public List<Film> getWorstRatingFilms() {
+        return filmService.getWorstRatingFilms();
+    }
+
+//    //delete film by id
+//    @DeleteMapping(value = "/film/delete", params = {"id"})
+//    public Map<String, Boolean> deleteFilm(@RequestParam("id") Integer id) {
+//        try {
+//            filmService.deleteFilm(id);
+//            return Collections.singletonMap("worked", true);
+//        }
+//        catch (Exception e) {
+//            return Collections.singletonMap("worked", false);
+//        }
+//    }
 }

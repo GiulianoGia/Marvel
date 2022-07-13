@@ -2,6 +2,7 @@ package ch.bbw.marvel.backend.services;
 
 import ch.bbw.marvel.backend.models.User;
 
+import java.util.Date;
 import java.util.List;
 
 public interface UserServiceInterface {
@@ -18,4 +19,8 @@ public interface UserServiceInterface {
     User getUserLogin(String email, String password);
 
     void updateUser(String email);
+
+    Date getLastLoggedIn(String firstname);
+
+    List<User> getUserByFirstnameIsLike(String firstname);
 }

@@ -5,6 +5,7 @@ import ch.bbw.marvel.backend.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -48,4 +49,11 @@ public class UserService implements UserServiceInterface {
         repository.updateUser(email);
     }
 
+    @Override
+    public Date getLastLoggedIn(String firstname) { return repository.getLastLoggedIn(firstname); }
+
+    @Override
+    public List<User> getUserByFirstnameIsLike(String firstname) {
+        return repository.getUserByFirstnameIsLike(firstname);
+    }
 }

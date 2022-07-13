@@ -25,9 +25,15 @@ public interface UserRepository extends JpaRepository<User, Integer> {
     @Query(value="select * from user where firstname = :firstname", nativeQuery = true)
     User getUserByFirstname(@Param("firstname") String firstname);
 
+    @Query(value="select * from user where firstname LIKE :firstname%", nativeQuery = true)
+    List<User> getUserByFirstnameIsLike(@Param("firstname") String firstname);
+
     @Query(value = "select * from user where email = :email && password = :password", nativeQuery = true)
     User getUserLogin(@Param("email") String email, @Param("password") String password);
 
     @Query(value="update user set last_logged_in = NOW() where email = :email", nativeQuery = true)
     void updateUser(@Param("email") String email);
+
+    @Query(value="select last_logged_in from user where firstname = :firstname", nativeQuery = true)
+    Date getLastLoggedIn(@Param("firstname") String firstname);
 }

@@ -16,4 +16,8 @@ public interface FilmServiceInterface {
     List<Film> getFilmsMostExpensive();
 
     void changeRating(int filmID, Double rating);
+
+    List<Film> getWorstRatingFilms();
+
+    void changeVideo(int filmID, String video);
 }
