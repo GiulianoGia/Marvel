@@ -5,6 +5,7 @@ import ch.bbw.marvel.backend.services.UserServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -52,6 +53,12 @@ public class UserController {
         return result;
     }
 
+    // get date from user when last logged In
+    @GetMapping(value = "/user/lastLoggedIn", params = {"firstname"})
+    public Date getLastLoggedIn(@RequestParam("firstname") String firstname) {
+        return userService.getLastLoggedIn(firstname);
+    }
+
     @PostMapping(value = "/user/new", params = {"age", "email", "firstname", "lastname", "password"})
     public void postUser(@RequestParam("age") Integer age,
                          @RequestParam("email") String email,
@@ -65,6 +72,11 @@ public class UserController {
         } else {
             logger.info(userService.getUserByFirstname(user.getFirstname()).toString());
         }
+    }
+
+    @GetMapping(value = "/user/getByFirstnameIsLike", params = {"firstname"})
+    public List<User> getUserByFirstnameIsLike(@RequestParam("firstname") String firstname) {
+        return userService.getUserByFirstnameIsLike(firstname);
     }
 
     @PostMapping("/user/update")

@@ -1,10 +1,12 @@
 package ch.bbw.marvel.frontend;
 
+import ch.bbw.marvel.frontend.service.FrontendUserService;
 import ch.bbw.marvel.frontend.models.Film;
 import ch.bbw.marvel.frontend.models.User;
 import ch.bbw.marvel.frontend.service.FrontendActorService;
 import ch.bbw.marvel.frontend.service.FrontendFilmService;
 import ch.bbw.marvel.frontend.service.LoginService;
+import com.sun.xml.bind.util.AttributesImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -15,20 +17,21 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 public class FrontendController {
 
-// ---------------------------------------------------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------------------------------------------
 // ATTRIBUTES
     private LoginService loginService = new LoginService();
     private FrontendFilmService filmService = new FrontendFilmService();
     private FrontendActorService actorService = new FrontendActorService();
+    private FrontendUserService userService = new FrontendUserService();
 
-// ---------------------------------------------------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------------------------------------------
 // LOGIN-SYSTEM
     @GetMapping("/login")
-    public String login(@CookieValue(name="currentUser", defaultValue="undefined.undefined") String cookieValue,
+    public String login(@CookieValue(name = "currentUser", defaultValue = "undefined.undefined") String cookieValue,
                         Model model) {
 
         String result = "login";
-        if(loginService.hasUser(cookieValue)) {
+        if (loginService.hasUser(cookieValue)) {
             result = "redirect:/";
         }
         model.addAttribute("user", new User());
@@ -40,7 +43,7 @@ public class FrontendController {
 
         Cookie cookie = loginService.login(user);
         String result = "login";
-        if(cookie != null) {
+        if (cookie != null) {
             result = "redirect:/";
             response.addCookie(cookie);
         }
@@ -50,11 +53,11 @@ public class FrontendController {
 
 
     @GetMapping("/register")
-    public String register(@CookieValue(name="currentUser", defaultValue="undefined.undefined") String currentUser,
+    public String register(@CookieValue(name = "currentUser", defaultValue = "undefined.undefined") String currentUser,
                            Model model) {
 
         String result = "redirect:/";
-        if(!loginService.hasUser(currentUser)) {
+        if (!loginService.hasUser(currentUser)) {
             result = "register";
             model.addAttribute("user", new User());
         }
@@ -65,7 +68,7 @@ public class FrontendController {
     public String register(@ModelAttribute User user, HttpServletResponse response) {
         Cookie cookie = loginService.register(user);
         String result = "register";
-        if(cookie != null) {
+        if (cookie != null) {
             result = "redirect:/";
             response.addCookie(cookie);
         }
@@ -85,11 +88,11 @@ public class FrontendController {
 // LOGGED-IN AREA
 
     @GetMapping("/")
-    public String index(@CookieValue(name="currentUser", defaultValue="undefined.undefined") String currentUser,
+    public String index(@CookieValue(name = "currentUser", defaultValue = "undefined.undefined") String currentUser,
                         Model model) {
 
         String result = "redirect:/login";
-        if(loginService.hasUser(currentUser)) {
+        if (loginService.hasUser(currentUser)) {
             result = "index.html";
             // to get the user id
             String[] splicedUser = currentUser.split("[.]", 0);
@@ -103,18 +106,34 @@ public class FrontendController {
     }
 
     @GetMapping("/film")
-    public String film(@RequestParam(name="name", required=true) String name,
-                       @CookieValue(name="currentUser", defaultValue = "undefined.undefined") String currentUser, Model model) {
+    public String film(@RequestParam(name = "name", required = true) String name,
+                       @CookieValue(name = "currentUser", defaultValue = "undefined.undefined") String currentUser, Model model) {
         String result = "redirect:/login";
-        if(loginService.hasUser(currentUser)) {
+        if (loginService.hasUser(currentUser)) {
             result = "film";
             Film film = filmService.getFilm(name);
             model.addAttribute("film", film);
             model.addAttribute("actors", actorService.getActorsToFilm(film));
         }
-
         return result;
     }
 
+    // ---------------------------------------------------------------------------------------------------------------------
+    // Area for user-search
+    @GetMapping("/search")
+    public String search(@CookieValue(name = "currentUser", defaultValue = "undefined.undefined") String currentUser, Model model) {
+        if (loginService.hasUser(currentUser)) {
+            model.addAttribute("users", userService.getAllUsers());
+            return "user";
+        } else {
+            return "redirect:/login";
+        }
+    }
 
+    @PostMapping("/search")
+    public String searchByFirstname(@RequestParam String firstname, Model model) {
+        System.out.println(userService.getUserByFirstname(firstname));
+        model.addAttribute("users", userService.getUserByFirstname(firstname));
+        return "user";
+    }
 }

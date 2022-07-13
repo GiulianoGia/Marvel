@@ -22,6 +22,20 @@ input:disabled {
     pointer-events: none;
 }
 
+.search__input {
+    width: 200px !important;
+    padding: 3px;
+    margin-right: 10px;
+    height: 30px;
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.search__input::placeholder {
+    color: gray;
+}
+
 a {
     color: #65a3d1;
 }
@@ -81,6 +95,11 @@ td {
 
 }
 
+.input-search__container {
+    display: flex;
+    flex-direction: row;
+}
+
 .form-title {
     color: #e70002;
     text-align: center;
@@ -123,6 +142,15 @@ td {
 
 .button-red:hover:not(.button-red:disabled) {
     background-color: #ff0003;
+}
+
+.search__button {
+    background-color: transparent;
+    color: #d20002;
+    border: 1px solid #d20002;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 100px;
 }
 
 .button-black {
@@ -292,6 +320,16 @@ td {
     cursor: pointer;
 }
 
+.top-nav {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+    margin-bottom: 30px;
+}
+
 /* -- BUTTONS --------------------------------------------------------------------------------------------------------*/
 .round-button {
     display: inline-block;
@@ -310,4 +348,33 @@ td {
     font-size: 100px;
     cursor: pointer;
     margin-top: -1000px;
+}
+
+/* -- User Styling ---------------------------------------------------------------------------------------------------------*/
+
+.user__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.user__item:hover {
+    background-color: gainsboro;
+}
+.user__item {
+    background-color: white;
+    width: 40%;
+    height: auto;
+    border-bottom: 3px solid gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 10px;
+}
+.profile__picutre {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
 }

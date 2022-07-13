@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search User</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="user-search">
+      <div class="top-nav">
+          <h1 class="title">Marvel+</h1>
+          <form action="#" th:action="@{/search}" method="post" class="input-search__container">
+              <input class="search__input" type="text" name="firstname" placeholder="Search for a user">
+              <input class="search__button" type="submit" value="Search">
+          </form>
+      </div>
+      <div th:each="user : ${users}" class="user__container">
+          <div class="user__item">
+              <img alt="profile" class="profile__picutre" src="/images/profile.png">
+              <div class="information__container">
+                  <p th:text="${user.firstname}"></p>
+                  <p th:text="${user.email}"></p>
+                  <p th:text="${user.lastLoggedIn}"></p>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+</html>
