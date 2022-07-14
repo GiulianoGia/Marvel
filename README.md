@@ -1,6 +1,13 @@
 # Marvel+
 ![de49644a-8646-45ed-8301-59cfb15f5bfb](https://user-images.githubusercontent.com/68944432/171650072-06fe0915-45af-4f00-acbc-044d34a1f1ea.jpg)
 
+
+# Installation
+Im Projektordner kann man ein docker compose up machen. Im Docker wird dann die Datenbank gespeichert. Im db-1 Container öffnet man ein Terminal und hier gibt man folgenden Befehl ein:
+```
+mysql -uroot -ptest Marvel < /home/Marvel.sql
+```
+Das importiert die Datenbank. Danach kann man den Code starten und die Applikation sollte gespeichert werden. Um sich einzuloggen gibt es den test@test.com user. Das Passwort lautet test. Man kann auch einen neuen Account erstellen. Hier muss man nur auf create account drücken.
 # Projektjournal
 ## Informieren
 ### Ziel
