@@ -1,6 +1,12 @@
 # Marvel+
 ![de49644a-8646-45ed-8301-59cfb15f5bfb](https://user-images.githubusercontent.com/68944432/171650072-06fe0915-45af-4f00-acbc-044d34a1f1ea.jpg)
 
+# Installation
+Wenn man das Projekt geclont hat, kann man jetzt im Projektordner einfach diesen Befehl eingeben:
+```
+docker compose up
+```
+
 # Projektjournal
 ## Informieren
 ### Ziel
