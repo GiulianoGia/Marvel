@@ -7,17 +7,7 @@ services:
       - "3306:3306"
     environment:
       MARIADB_ROOT_PASSWORD: test
+      MYSQL_DATABASE: Marvel
     volumes:
       - ./src/Marvel.sql:/home/Marvel.sql
-        
-  mail:
-    image: bytemark/smtp
-    restart: always
-    ports: 
-      - "587:587"
-    environment:
-      RELAY_HOST: localhost
-      RELAY_PORT: 587
-      RELAY_USERNAME: admin@localhost
-      RELAY_PASSWORD: test
 
