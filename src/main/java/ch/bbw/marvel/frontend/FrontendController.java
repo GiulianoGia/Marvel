@@ -150,12 +150,26 @@ public class FrontendController {
         return result;
     }
 
+    @GetMapping ("/search")
+    public String searchUser(@CookieValue(name="currentUser") String cookie, Model model) {
+        if (loginService.hasUser(cookie)) {
+            model.addAttribute("users", userService.getAllUsers());
+            return "user";
+        }
+        else {
+            return "redirect:/login";
+        }
+    }
 
 
     @PostMapping("/search")
     public String searchByFirstname(@RequestParam String firstname, Model model) {
         System.out.println(userService.getUserByFirstname(firstname));
-        model.addAttribute("users", userService.getUserByFirstname(firstname));
+        if (userService.getUserByFirstname(firstname).isEmpty()) {
+            model.addAttribute("users", userService.getAllUsers());
+        } else {
+            model.addAttribute("users", userService.getUserByFirstname(firstname));
+        }
         return "user";
     }
 }
