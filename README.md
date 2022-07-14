@@ -203,12 +203,16 @@ Ich bin stolz darauf, dass unsere Präsentation so gut gelaufen ist.
 ## 07/07/2022
 > Giuliano Gianola
 #### Wo wurde nicht auf meine Meinung eingegangen?
+In Vorletzte Woche hatten wir sehr viel Stress mit unserem Projekt, da ja nur noch eine Woche übrg ist. Wir wussten nicht genau, welche Funktionen wir noch in die App implementieren möchten und welche nicht. 
 
 #### Wobei konnte ich mich durchsetzen?
+Ich konnte mich durchsetzten, dass wir uns auf die Dokumentation noch fokusieren und nicht mehr gross neue Sachen versuchen in die App zu brinden. 
 
 #### In welchen Punkten war sich die Gruppe einig
+Ich und Anthony waren uns einig, dass wir am Ende nicht einen Filter für die Filme erstellen und die Forgot-Password funktion nicht mehr weiter verfolgen. 
 
 #### Auf was bin ich stolz (oder eben nicht)
+Ich bin stolz, dass wir unsere Planung noch von Grund auf besser strukturieren konnten. Damit man beim durchlesen eine bessere Übersicht hat. 
 
 > Anthony Peña Vargas
 #### Wo wurde nicht auf meine Meinung eingegangen
