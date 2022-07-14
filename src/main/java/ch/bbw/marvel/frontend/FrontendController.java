@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
+import java.util.List;
 
 @Controller
 public class FrontendController {
@@ -102,6 +103,12 @@ public class FrontendController {
 // ---------------------------------------------------------------------------------------------------------------------
 // LOGGED-IN AREA
 
+    @PostMapping("/")
+    public String PostTags(@RequestParam String tag, Model model) {
+        System.out.println(tag);
+        return null;
+    }
+
     @GetMapping("/")
     public String index(@CookieValue(name = "currentUser", defaultValue = "undefined.undefined") String currentUser,
                         Model model) {
@@ -111,10 +118,12 @@ public class FrontendController {
             result = "index.html";
             // to get the user id
             String[] splicedUser = currentUser.split("[.]", 0);
+            String[] tags = {"Thor", "Avengers", "Iron Man", "Black Panther", "Black Widow", "Captain America"};
             int userId = Integer.parseInt(splicedUser[0]);
             model.addAttribute("films", filmService.getAllFilms());
             model.addAttribute("bestFilms", filmService.getBestRatingFilms());
             model.addAttribute("expensiveFilms", filmService.mostExpensiveFilms());
+            model.addAttribute("tags", tags);
             model.addAttribute("userList", filmService.getUserFilms(userId));
         }
         return result;

@@ -8,7 +8,7 @@
 <body>
   <div class="user-search">
       <div class="top-nav">
-          <h1 class="title">Marvel+</h1>
+          <a href="/" style="color: black; text-decoration: none"><h1 class="title">Marvel+</h1></a>
           <form action="#" th:action="@{/search}" method="post" class="input-search__container">
               <input class="search__input" type="text" name="firstname" placeholder="Search for a user">
               <input class="search__button" type="submit" value="Search">
@@ -24,6 +24,7 @@
               </div>
           </div>
       </div>
+      <a class="back__link" href="/">Go back to Home</a>
   </div>
 </body>
 </html>
