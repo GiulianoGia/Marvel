@@ -80,6 +80,7 @@ Giuliano hat jetzt einen Endpoint gemacht, mit dem man zu einem Film eine Liste 
 #### Detailansicht Actor
 
 #### Suchfunktion
+Wir wollten unseren Usern die Möglichkeit geben, nach Personen in unserer App zu suchen. Wir haben eine Methode entwickelt, inder man nach dem usernamen suchen kann und die entsprechenden Personen angezeigt werden. Bei Der Suche werden dann Usernamen, Email-Adressen und wann der User sich zuletzt eingeloggt hat. Diese Informationen sind sicher in unseren Datenbank gespeichert und niemand hat Zugriff auf diese Informationen ausser man hat einen Secret-Key. Bei falschen Suchanfragen, werden alle User angezeigt und nicht eine leere Liste. 
 
 
 ## Kontrollieren
@@ -164,12 +165,16 @@ Ich war stolz, dass ich es geschafft habe ein Loginsystem zu programmieren und d
 ## 30/06/2022
 > Giuliano Gianola
 #### Wo wurde nicht auf meine Meinung eingegangen?
+Wir wussten nicht, wie wir das Problem mit den Bildern in der Datenbank lösen sollten. Wir hatten die Frage, ob es besser wäre diese in der Datenbank zu speichern oder einfach nur die url zu den Bildern. Wir haben uns dan entschieden nur die url abzuspeichern. 
 
 #### Wobei konnte ich mich durchsetzen?
+Ich konnte mich durchsetzten, dass wir eine Suchfunktion entwickeln möchten, wodurch man nach anderen Benutzern suchen kann. 
 
 #### In welchen Punkten war sich die Gruppe einig
+Wir waren uns einig, dass wir nicht direkt in den main Branch Änderungen schreiben, sondern in den dazu vohergesehen Branches. 
 
 #### Auf was bin ich stolz (oder eben nicht)
+Ich bin stolz, dass ich bereits für die Suchfunktion alles im Backend vorbereiten konnte. Nun müssen wir nur noch das Frontend schreiben. 
 
 > Anthony Peña Vargas
 #### Wo wurde nicht auf meine Meinung eingegangen
