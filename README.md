@@ -1,19 +1,6 @@
 # Marvel+
 ![de49644a-8646-45ed-8301-59cfb15f5bfb](https://user-images.githubusercontent.com/68944432/171650072-06fe0915-45af-4f00-acbc-044d34a1f1ea.jpg)
 
-
-# Installation
-Im Projektordner folgenden Befehl nutzen:
-```
-docker compose up
-
-```
-
-. Im Docker wird dann die Datenbank gespeichert. Im db-1 Container öffnet man ein Terminal und hier gibt man folgenden Befehl ein:
-```
-mysql -uroot -ptest Marvel < /home/Marvel.sql
-```
-Das importiert die Datenbank. Danach kann man den Code starten und die Applikation sollte gespeichert werden. Um sich einzuloggen gibt es den test@test.com user. Das Passwort lautet test. Man kann auch einen neuen Account erstellen. Hier muss man nur auf create account drücken.
 # Projektjournal
 ## Informieren
 ### Ziel
@@ -97,7 +84,18 @@ Wir wollten unseren Usern die Möglichkeit geben, nach Personen in unserer App z
 
 
 ## Kontrollieren
+Um unsere Applikation zu testen haben wir zurst alle Branches ins main gemerged, damit wir auch wirklich alles auf dem neuesten Stand hatten. Danach haben wir jede View uns angeschaut und Fehler sowie Verbesserungen aufgeschrieben. Diese haben wir dann in der letzten Lektion versucht zu verbessern. Hier eine Liste, was alles noch nicht geht:
+Index:    - Manche Filme lassen sich nicht öffnen (man gelangt nicht auf die film page)
+          - Konnten keine Filter Funktion einfügen für die Filme 
+          
+Search:   - Um alle User wieder anzuzeigen, muss man auf das Input-Field klicken und die Enter oder den dazu vorhergesehenen Button betätigen. 
+Film:     - Schauspieler werden machnmal nicht korrekt angezeigt. (oder es sind immer die gleichen) 
+
 ## Auswerten
+In den letzten Wochen haben wir sehr viel Zeit in dieses Projekt investiert. Leider konnten wir nicht alles realisieren, was wir eigentlich für dieses Projekt bestimmt haben. Jedoch sind wir sehr stolz auf das, was wir mit diesem Projekt erreicht haben. Als wir mit unserem Projekt angefangen haben, wussten wir dass unsere Idee grosses Potenzial hat. Zu beginn unseres Projektes haben wir ein ERD erstellt, wie unsere Datenbank aussehen soll. Das hat uns in den Anfangszeiten sehr viel Zeit und Ärger erspart. Jedoch hätte unsere Planung noch ein wenig detailierter sein können. Unsere Dokumentation haben wir dann jeweils im Zug geschrieben, da wir die Zeit in der Schule voll und ganz für unser Projekt witmen wollten. Durch unser relativ grosses Vorwissen, haben wir sehr viel Zeit sparen konnnen, wie wir unser Projekt umsetzten möchten. Das war für uns ein grosser Vorteil, da wir wussten, dass die jeweilige Person ihre Arbeiten sehr gut machen wird und konnten dadurch voll auf unsere Task konzentrieren. Bei der Frage, welche Technologien wir nutzten, waren wir uns sehr schnell einig. Unser Projekt hat uns beiden sehr viel Spass gemacht und wir konnten unseren Gedanken und Ideen freien lauf lassen. Wir wussten das es nicht einfach sein wird, jedoch wollten wir so viel wie Möglich aus diesem Projekt lernen und provitieren. Das schwerste an diesem Projekt war es das Login-System so zu gestalten, wie wir uns das vorgestellt haben. Dort hatten wir einige Probleme, konnten diese jedoch mit ein paar Tutorials gut lösen. Springboot und MariaDB haben uns nicht grosse Probleme bereitet. Die Anbindung im Frontend mit dem Backend ist sehr reibungslos gelaufen, was uns sehr verwundert hatte. Jedoch waren wir auch sehr dankbar darüber. :zany_face:. 
+
+Zusammenfassung:
+Das Projekt hat uns sehr viel Spass gemacht. Wir konnten sehr viel von der Arbeit lernen und ausprobieren. Meiner Meinung nach ist unser Endprodukt ein voller Erfolg. Wir hatten wenige bis gar keine Schwierigkeiten und unsere Zusammenarbeit ist reibunglos gelaufen. Jedoch würden wir das nächste Mal eine bessere Planung schreiben, da diese sehr kurz ausgefallen ist.
 
 # Reflexion 
 ## 02/06/2022
