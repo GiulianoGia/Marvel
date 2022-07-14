@@ -3,7 +3,13 @@
 
 
 # Installation
-Im Projektordner kann man ein docker compose up machen. Im Docker wird dann die Datenbank gespeichert. Im db-1 Container öffnet man ein Terminal und hier gibt man folgenden Befehl ein:
+Im Projektordner folgenden Befehl nutzen:
+```
+docker compose up
+
+```
+
+. Im Docker wird dann die Datenbank gespeichert. Im db-1 Container öffnet man ein Terminal und hier gibt man folgenden Befehl ein:
 ```
 mysql -uroot -ptest Marvel < /home/Marvel.sql
 ```
