@@ -6,6 +6,7 @@ Wenn man das Projekt geclont hat, kann man jetzt im Projektordner einfach diesen
 ```
 docker compose up
 ```
+Hiermit wird ein Docker Compose erstellt mit einem Mariadb Container drin. In diesem befindet sich die Datenbank mit den Daten für die Applikation. Bevor man die Applikation starten kann muss man sicher stellen, dass dieser Container läuft.
 
 # Projektjournal
 ## Informieren
