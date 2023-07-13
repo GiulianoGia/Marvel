@@ -7,8 +7,9 @@ services:
     depends_on:
       - db
     environment:
-      MYSQL_PASSWORD: /run/secrets/db_password
-      MYSQL_USER: /run/secrets/db_user
+      DB_PASSWORD: /run/secrets/db_password
+      DB_USERNAME: /run/secrets/db_user
+      DB_URL: jdbc:mariadb://db:3306/Marvel
     secrets:
       - db_password
       - db_name

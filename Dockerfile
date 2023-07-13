@@ -1,5 +1,5 @@
 FROM maven:3.8.1-openjdk-17-slim AS builder
-COPY ./src .
+COPY ./src ./src
 COPY ./pom.xml .
 RUN mvn clean package
 
