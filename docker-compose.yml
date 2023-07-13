@@ -2,6 +2,8 @@ version: '3'
 services:
   marvel:
     build: .
+    ports: 
+      - "8080:8080"
     networks:
       - marvelNetwork
     depends_on:
@@ -9,19 +11,21 @@ services:
     environment:
       DB_PASSWORD: /run/secrets/db_password
       DB_USERNAME: /run/secrets/db_user
-      DB_URL: jdbc:mariadb://db:3306/Marvel
+      DB_NAME: /run/secrets/db_name
+      DB_URL: jdbc:mariadb://db:3306/${DB_NAME}
     secrets:
+      - db_user
       - db_password
       - db_name
   db:
     image: mariadb
     restart: always
-    ports: 
-      - "3306:3306"
     networks:
       - marvelNetwork
     secrets:
       - db_root_password
+      - db_user
+      - db_password
       - db_name
     environment:
       MYSQL_DATABASE: /run/secrets/db_name
